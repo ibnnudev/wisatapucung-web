@@ -15,6 +15,7 @@ export default {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
             },
         },
+        darkMode: 'class',
     },
 
     plugins: [forms],

@@ -19,12 +19,20 @@
         }
     </style>
 
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased h-screen">
+<body class="font-sans text-gray-900 antialiased h-screen bg-gray-50">
     {{ $slot }}
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    @stack('js-internal')
 </body>
 
 </html>
