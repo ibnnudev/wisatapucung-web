@@ -4,7 +4,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('user.home');
+Route::get('/tentang-kami', [HomeController::class, 'about'])->name('user.about');
+Route::get('/demografis', [HomeController::class, 'demography'])->name('user.demography');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

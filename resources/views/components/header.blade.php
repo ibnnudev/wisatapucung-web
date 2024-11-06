@@ -1,3 +1,5 @@
+@props(['theme' => 'light'])
+
 <header class="absolute inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
@@ -5,7 +7,8 @@
                 <span class="sr-only">
                     Wisata Edukasi Kalipucung
                 </span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                <img class="h-8 w-auto"
+                    src="https://tailwindui.com/plus/img/logos/mark.svg?color={{ $theme == 'light' ? 'green' : 'indigo' }}&shade=600"
                     alt="">
             </a>
         </div>
@@ -21,27 +24,29 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#"
-                class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg {{ request()->is('/') ? 'bg-indigo-600' : '' }}">Beranda</a>
-            <a href="#"
-                class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg">Tentang
+            <a href="/"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('/') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Beranda</a>
+            <a href="{{ route('user.about') }}"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('tentang-kami') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Tentang
                 Kami</a>
-            <a href="#"
-                class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg">Kondisi
+            <a href="{{ route('user.demography') }}"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('demografis') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Kondisi
                 Geografis</a>
             <a href="#"
-                class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg">Antraksi</a>
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Antraksi</a>
             <a href="#"
-                class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg">Informasi</a>
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Informasi</a>
             <a href="#"
-                class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg">Produk</a>
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Produk</a>
             <a href="#"
-                class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg">Organisasi</a>
-            <a href="#" class="text-sm/6 font-semibold text-white hover:bg-indigo-600 py-1 px-2 rounded-lg">Kontak
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Organisasi</a>
+            <a href="#"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Kontak
                 Kami</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm/6 font-semibold text-white">Log in <span
+            <a href="#"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900' : 'text-white' }}">Masuk <span
                     aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>
