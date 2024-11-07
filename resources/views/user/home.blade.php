@@ -1,7 +1,6 @@
 <x-guest-layout>
     <div class="bg-white">
         <x-header theme="light" />
-
         <div class="relative isolate px-6 pt-14 lg:px-8 mb-24">
             <div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
                 {{-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -132,7 +131,7 @@
 
                 <div class="relative pl-20 pr-6 sm:pl-6 md:px-0">
                     <div class="relative w-full max-w-xs mt-4 mb-10 ml-auto">
-                        <img class="ml-auto h-[26rem] object-cover"
+                        <img class="ml-auto h-[26rem] object-cover rounded-lg shadow-xl"
                             src="https://cdn.pixabay.com/photo/2019/06/13/16/06/dance-4271941_640.jpg" alt="" />
 
                         <img class="absolute -top-4 -left-12"
@@ -140,7 +139,7 @@
                             alt="" />
 
                         <div class="absolute -bottom-10 -left-16">
-                            <div class="bg-orange-600">
+                            <div class="bg-orange-600 rounded-lg">
                                 <div class="px-8 py-10">
                                     <span class="block text-4xl font-bold text-white lg:text-5xl"> 100% </span>
                                     <span class="block mt-2 text-base leading-tight text-white"> Kepuasan

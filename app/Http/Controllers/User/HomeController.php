@@ -21,4 +21,14 @@ class HomeController extends Controller
     {
         return view('user.demography');
     }
+
+    public function attraction()
+    {
+        return view('user.attraction');
+    }
+
+    public function information()
+    {
+        return view('user.information');
+    }
 }

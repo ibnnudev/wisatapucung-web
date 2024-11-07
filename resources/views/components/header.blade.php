@@ -32,10 +32,25 @@
             <a href="{{ route('user.demography') }}"
                 class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('demografis') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Kondisi
                 Geografis</a>
-            <a href="#"
-                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Antraksi</a>
-            <a href="#"
-                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Informasi</a>
+            <a href="{{ route('user.attraction') }}"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('atraksi') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Atraksi</a>
+            <a type="button" data-dropdown-toggle="information-dropdown"
+                class="cursor-pointer text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('informasi') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Informasi</a>
+            <!-- Dropdown menu -->
+            <div id="information-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                        <a href="{{ route('user.information') }}" class="block px-4 py-2 hover:bg-gray-100">Berita</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Penginapan</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Paket Wisata</a>
+                    </li>
+                </ul>
+            </div>
+
             <a href="#"
                 class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Produk</a>
             <a href="#"
