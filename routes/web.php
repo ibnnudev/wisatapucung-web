@@ -9,6 +9,7 @@ Route::get('/tentang-kami', [HomeController::class, 'about'])->name('user.about'
 Route::get('/demografis', [HomeController::class, 'demography'])->name('user.demography');
 Route::get('/atraksi', [HomeController::class, 'attraction'])->name('user.attraction');
 Route::get('/informasi', [HomeController::class, 'information'])->name('user.information');
+Route::get('/kontak-kami', [HomeController::class, 'contact'])->name('user.contact');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

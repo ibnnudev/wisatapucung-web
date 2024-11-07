@@ -31,4 +31,9 @@ class HomeController extends Controller
     {
         return view('user.information');
     }
+
+    public function contact()
+    {
+        return view('user.contact');
+    }
 }

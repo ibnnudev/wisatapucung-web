@@ -55,8 +55,8 @@
                 class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Produk</a>
             <a href="#"
                 class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Organisasi</a>
-            <a href="#"
-                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Kontak
+            <a href="{{ route('user.contact') }}"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('kontak-kami') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Kontak
                 Kami</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
