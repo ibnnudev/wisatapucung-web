@@ -51,16 +51,17 @@
                 </ul>
             </div>
 
-            <a href="#"
-                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Produk</a>
-            <a href="#"
-                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg">Organisasi</a>
+            <a href="{{ route('user.product') }}"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('produk') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Produk</a>
+            <a href="{{ route('user.organization') }}"
+                class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('organisasi') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}
+                ">Organisasi</a>
             <a href="{{ route('user.contact') }}"
                 class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('kontak-kami') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Kontak
                 Kami</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#"
+            <a href="{{ route('login') }}"
                 class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900' : 'text-white' }}">Masuk <span
                     aria-hidden="true">&rarr;</span></a>
         </div>

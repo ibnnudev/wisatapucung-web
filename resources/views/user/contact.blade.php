@@ -1,9 +1,10 @@
 <x-guest-layout>
     <div class="bg-gray-50">
-        <x-header theme="light" />
+        <x-header theme="dark" />
     </div>
 
-    <section class="py-10 bg-gray-900 sm:py-16 lg:py-40">
+    <section
+        class="py-10 bg-[url('https://cdn.pixabay.com/photo/2024/09/19/11/34/mountain-9058566_1280.jpg')] bg-no-repeat bg-cover sm:py-16 lg:py-40">
         <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:items-stretch md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10">
                 <div class="flex flex-col justify-between lg:py-5">

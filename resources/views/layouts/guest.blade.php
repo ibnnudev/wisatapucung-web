@@ -22,6 +22,9 @@
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 
+    {{-- AOS --}}
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -32,6 +35,37 @@
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
+    <!-- Text Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    {{-- AOS --}}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        // fade in text
+        var textWrapper = document.querySelector('.fd-in-text');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({
+                loop: true
+            })
+            .add({
+                targets: '.fd-in-text .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 2250,
+                delay: (el, i) => 50 * (i + 1)
+            }).add({
+                targets: '.fd-in-text',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
     @stack('js-internal')
 </body>
 

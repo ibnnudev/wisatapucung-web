@@ -6,10 +6,10 @@
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-full px-6 lg:px-24">
             <div class="mx-auto max-w-2xl lg:mx-0">
-                <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     Temukan Informasi Terbaru
                 </h2>
-                <p class="mt-2 text-lg/8 text-gray-600">
+                <p class="mt-2 text-base text-gray-600">
                     Kumpulan informasi terbaru yang bisa membantu anda dalam menemukan informasi yang anda butuhkan.
                 </p>
             </div>

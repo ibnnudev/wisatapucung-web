@@ -10,7 +10,8 @@
                     </div>
                 </div> --}}
                 <div class="text-center">
-                    <h1 class="text-balance text-shadow text-5xl font-semibold tracking-tight text-white sm:text-8xl">
+                    <h1
+                        class="text-balance text-shadow text-5xl font-semibold tracking-tight text-white sm:text-8xl fd-in-text">
                         Wisata Edukasi Kalipucung
                     </h1>
                     <p class="mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8">
@@ -106,7 +107,7 @@
                 </div>
 
                 <div class="lg:col-span-3">
-                    <img class="w-full rounded-lg shadow-xl"
+                    <img class="w-full rounded-lg shadow-xl" data-aos="fade-left"
                         src="https://cdn.pixabay.com/photo/2022/06/23/09/58/the-season-of-ripe-rice-7279448_1280.jpg"
                         alt="" />
                 </div>
@@ -205,14 +206,14 @@
                         alt="" />
 
                     <div class="relative max-w-xs ml-auto">
-                        <div class="overflow-hidden aspect-w-3 aspect-h-4">
-                            <img class="object-cover w-full h-[30rem] scale-150"
+                        <div class="overflow-hidden aspect-w-3 aspect-h-4 rounded-lg shadow-xl">
+                            <img class="object-cover w-full h-[30rem] scale-150 rounded-lg shadow-xl"
                                 src="https://cdn.pixabay.com/photo/2020/08/27/09/09/village-5521554_1280.jpg"
                                 alt="" />
                         </div>
 
                         <div class="absolute bottom-0 -left-16">
-                            <div class="bg-orange-600">
+                            <div class="bg-orange-600 rounded-lg">
                                 <div class="py-4 pl-4 pr-10 sm:py-6 sm:pl-8 sm:pr-16">
                                     <svg class="w-9 sm:w-14 h-9 sm:h-14" xmlns="http://www.w3.org/2000/svg"
                                         fill="#FFF" viewBox="0 0 24 24" stroke="currentColor">

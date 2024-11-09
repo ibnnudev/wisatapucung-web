@@ -32,8 +32,23 @@ class HomeController extends Controller
         return view('user.information');
     }
 
+    public function informationDetail($slug)
+    {
+        return view('user.information_detail', compact('slug'));
+    }
+
     public function contact()
     {
         return view('user.contact');
+    }
+
+    public function product()
+    {
+        return view('user.product');
+    }
+
+    public function organization()
+    {
+        return view('user.organization');
     }
 }
