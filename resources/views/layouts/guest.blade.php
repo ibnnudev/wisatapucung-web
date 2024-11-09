@@ -29,7 +29,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased h-screen bg-gray-50">
+<body class="font-sans text-gray-900 antialiased h-screen bg-gray-50 overflow-x-hidden">
     {{ $slot }}
 
     <!-- Flowbite JS -->
