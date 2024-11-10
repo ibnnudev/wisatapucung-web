@@ -36,17 +36,24 @@ class Home extends Model
         'section4_social_media', // :link
 
         // section 5
-        'section5_welcome_message',
-        'section5_name',
-        'section5_position',
+        'section5_title',
+        'section5_description',
         'section5_image',
-        'section5_pretext',
-        'section5_social_media_button_title',
-        'section5_social_media', // :link
+        'section5_rate',
+        'section5_rate_text',
 
         // section 6
-        'section6_title',
-        'section6_items', // JSON [{number: '', title: '', icon: ''}]
+        'section6_welcome_message',
+        'section6_name',
+        'section6_position',
+        'section6_image',
+        'section6_pretext',
+        'section6_social_media_button_title',
+        'section6_social_media', // :link
+
+        // section 7
+        'section7_title',
+        'section7_items', // JSON [{number: '', title: '', icon: ''}]
     ];
 
     public $timestamps = false;

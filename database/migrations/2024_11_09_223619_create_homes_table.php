@@ -41,17 +41,24 @@ return new class extends Migration
             $table->string('section4_social_media');
 
             // section 5
-            $table->longText('section5_welcome_message');
-            $table->string('section5_name');
-            $table->string('section5_position');
+            $table->string('section5_title');
+            $table->longText('section5_description');
             $table->longText('section5_image');
-            $table->longText('section5_pretext');
-            $table->string('section5_social_media_button_title');
-            $table->string('section5_social_media');
+            $table->string('section5_rate');
+            $table->string('section5_rate_text');
 
             // section 6
-            $table->string('section6_title');
-            $table->json('section6_items')->nullable();
+            $table->longText('section6_welcome_message');
+            $table->string('section6_name');
+            $table->string('section6_position');
+            $table->longText('section6_image');
+            $table->longText('section6_pretext');
+            $table->string('section6_social_media_button_title');
+            $table->string('section6_social_media');
+
+            // section 7
+            $table->string('section7_title');
+            $table->json('section7_items')->nullable();
 
             $table->timestamps();
         });

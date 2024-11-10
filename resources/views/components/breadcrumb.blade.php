@@ -1,6 +1,6 @@
 @props(['items'])
 
-<nav class="flex px-5 py-3 border border-gray-200 rounded-lg bg-gray-50" aria-label="Breadcrumb">
+<nav class="flex px-5 py-3 border border-gray-200 rounded-lg bg-gray-50 mb-5" aria-label="Breadcrumb">
     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li class="inline-flex items-center">
             <a href="{{ route('admin.dashboard') }}"
