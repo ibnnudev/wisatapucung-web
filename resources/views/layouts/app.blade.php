@@ -19,10 +19,14 @@
         }
     </style>
 
+    @toastifyCss
+
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 
+
     @stack('styles')
+
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -39,9 +43,11 @@
         </div>
     </div>
 
+    @toastifyJs
 
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
 
     @stack('scripts')
 </body>

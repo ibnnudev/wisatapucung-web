@@ -64,4 +64,14 @@ class Home extends Model
         'section2_items' => 'array',
         'section6_items' => 'array',
     ];
+
+    public function getAll()
+    {
+        return $this->all();
+    }
+
+    public function getById($id)
+    {
+        return $this->where('id', $id)->first();
+    }
 }

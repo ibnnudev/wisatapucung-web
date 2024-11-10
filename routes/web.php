@@ -26,6 +26,7 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     // Home
     Route::group(['prefix' => '/home'], function () {
+        Route::put('/{id}', [AdminHomeController::class, 'update'])->name('admin.home.update');
         Route::get('/', [AdminHomeController::class, 'index'])->name('admin.home.index');
     });
 });

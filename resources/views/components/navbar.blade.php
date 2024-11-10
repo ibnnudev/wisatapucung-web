@@ -32,28 +32,22 @@
                         id="dropdown-user">
                         <div class="px-4 py-3" role="none">
                             <p class="text-sm text-gray-900 " role="none">
-                                Neil Sims
+                                {{ auth()->user()->name }}
                             </p>
                             <p class="text-sm font-medium text-gray-900 truncate " role="none">
-                                neil.sims@flowbite.com
+                                {{ auth()->user()->email }}
                             </p>
                         </div>
                         <ul class="py-1" role="none">
                             <li>
-                                <a href="#" class="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                <a href="{{ route('admin.dashboard') }}"
+                                    class="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                     role="menuitem">Dashboard</a>
                             </li>
                             <li>
-                                <a href="#" class="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                    role="menuitem">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                    role="menuitem">Earnings</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                    role="menuitem">Sign out</a>
+                                <a href="{{ route('profile.edit') }}"
+                                    class="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem">Profile</a>
                             </li>
                         </ul>
                     </div>
