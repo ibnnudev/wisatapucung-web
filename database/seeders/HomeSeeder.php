@@ -21,23 +21,6 @@ class HomeSeeder extends Seeder
             'section2_slogan' => 'Jelajahi Wisata Edukasi Kalipucung',
             'section2_title'  => 'Bangun Pengalaman yang Tak Terlupakan',
             'section2_image'  => 'https://cdn.pixabay.com/photo/2022/06/23/09/58/the-season-of-ripe-rice-7279448_1280.jpg',
-            'section2_items'  => json_encode([
-                [
-                    'title'       => 'Atraksi Kesenian',
-                    'description' => 'Kami menyediakan berbagai atraksi kesenian yang akan memukau hati anda.',
-                    'image'       => null
-                ],
-                [
-                    'title'       => 'Penginapan',
-                    'description' => 'Berbagai penginapan yang nyaman dan aman untuk anda dan keluarga.',
-                    'image'       => null
-                ],
-                [
-                    'title'       => 'Paket Wisata',
-                    'description' => 'Jelajahi berbagai lokasi indah di Kalipucung dengan paket wisata yang kami sediakan.',
-                    'image'       => null
-                ],
-            ]),
 
             // section 3
             'section3_title'       => 'Atraksi Kesenian Daerah',
@@ -74,23 +57,6 @@ class HomeSeeder extends Seeder
 
             // section 7
             'section7_title' => '"Angka menunjukkan kerja keras kami selama 6 tahun terakhir"',
-            'section7_items' => json_encode([
-                [
-                    'number' => '1000',
-                    'title'  => 'Pengunjung',
-                    'icon'   => ''
-                ],
-                [
-                    'number' => '100',
-                    'title'  => 'Penginapan',
-                    'icon'   => ''
-                ],
-                [
-                    'number' => '10',
-                    'title'  => 'Paket Wisata',
-                    'icon'   => ''
-                ],
-            ]),
         ]);
     }
 }

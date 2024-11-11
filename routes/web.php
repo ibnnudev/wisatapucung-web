@@ -6,6 +6,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('get-image/{filename}', [HomeController::class, 'getImage'])->name('user.home.get-image');
+
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
 Route::get('/tentang-kami', [HomeController::class, 'about'])->name('user.about');
 Route::get('/demografis', [HomeController::class, 'demography'])->name('user.demography');
@@ -25,10 +27,13 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Home
-    Route::group(['prefix' => '/home'], function () {
-        Route::put('/{id}', [AdminHomeController::class, 'update'])->name('admin.home.update');
-        Route::get('/', [AdminHomeController::class, 'index'])->name('admin.home.index');
-    });
+    // ::> Home - Home Item
+    Route::post('/home/item', [AdminHomeController::class, 'storeItem'])->name('admin.home.item.store');
+    Route::put('/home/item/{id}', [AdminHomeController::class, 'updateItem'])->name('admin.home.item.update');
+    Route::delete('/home/item/{id}', [AdminHomeController::class, 'destroyItem'])->name('admin.home.item.destroy');
+
+    Route::get('/home/get-image/{filename}', [AdminHomeController::class, 'getImage'])->name('admin.home.get-image');
+    Route::resource('/home', AdminHomeController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';

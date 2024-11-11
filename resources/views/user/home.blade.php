@@ -3,20 +3,13 @@
         <x-header theme="light" />
         <div class="relative isolate px-6 pt-14 lg:px-8 mb-24">
             <div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
-                {{-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                    <div
-                        class="relative rounded-full px-3 py-1 text-sm/6 text-white bg-indigo-600 ring-1 ring-white/40 hover:ring-white">
-                        Announcing our next round of funding
-                    </div>
-                </div> --}}
                 <div class="text-center">
                     <h1
                         class="text-balance text-shadow text-5xl font-semibold tracking-tight text-white sm:text-8xl fd-in-text">
-                        Wisata Edukasi Kalipucung
+                        {{ $data->section1_title }}
                     </h1>
                     <p class="mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8">
-                        Selamat datang di website resmi Wisata Edukasi Kalipucung. Kami menyediakan berbagai informasi
-                        tentang wisata edukasi, berita, kesenian, dan penginapan.
+                        {{ $data->section1_description }}
                     </p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                         <a href="#"
@@ -34,26 +27,22 @@
             {{-- end add inset overlay --}}
             "
                 aria-hidden="true">
-                <img src="https://cdn.pixabay.com/photo/2015/01/28/23/34/mountains-615428_1280.jpg" loading="lazy"
-                    alt="" class="object-cover w-full h-full" />
+                <img src="{{ route('user.home.get-image', $data->section1_image) }}" loading="lazy" alt=""
+                    class="object-cover w-full h-[55rem]" />
             </div>
         </div>
     </div>
-
-    {{-- SECOND --}}
-
-    {{-- END SECOND --}}
 
     {{-- THIRD --}}
     <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
         <div class="px-4 mx-auto max-w-full sm:px-6 lg:px-24">
             <div class="max-w-xl mx-auto text-center">
                 <p class="text-sm font-semibold tracking-widest text-blue-600 uppercase">
-                    Jelajahi Wisata Edukasi Kalipucung
+                    {{ $data->section2_slogan }}
                 </p>
 
                 <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-                    Bangun Pengalaman yang Tak Terlupakan
+                    {{ $data->section2_title }}
                 </h2>
             </div>
 

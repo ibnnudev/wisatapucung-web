@@ -17,7 +17,6 @@ class Home extends Model
         'section2_slogan',
         'section2_title',
         'section2_image',
-        'section2_items', // JSON [{title: '', description: '', image: ''}]
 
         // section 3
         'section3_title',
@@ -53,7 +52,6 @@ class Home extends Model
 
         // section 7
         'section7_title',
-        'section7_items', // JSON [{number: '', title: '', icon: ''}]
     ];
 
     public $timestamps = false;

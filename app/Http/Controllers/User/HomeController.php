@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Home;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('user.home');
+        $data = Home::first();
+        return view('user.home', compact('data'));
     }
 
     public function about()
@@ -50,5 +53,11 @@ class HomeController extends Controller
     public function organization()
     {
         return view('user.organization');
+    }
+
+    public function getImage(string $filename)
+    {
+        $file = Storage::disk('public')->get('uploads/home/' . $filename);
+        return response($file, 200)->header('Content-Type', 'image/jpeg');
     }
 }

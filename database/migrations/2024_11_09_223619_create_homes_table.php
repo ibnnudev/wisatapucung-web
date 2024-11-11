@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('section2_slogan');
             $table->string('section2_title');
             $table->longText('section2_image');
-            $table->json('section2_items')->nullable();
 
             // section 3
             $table->string('section3_title');
@@ -58,7 +57,6 @@ return new class extends Migration
 
             // section 7
             $table->string('section7_title');
-            $table->json('section7_items')->nullable();
 
             $table->timestamps();
         });
