@@ -7,6 +7,7 @@
             <li>
                 <x-menu-item route="admin.dashboard" label="Dashboard" />
                 <x-menu-item route="admin.home.index" label="Beranda" />
+                <x-menu-item route="admin.about-us.index" label="Tentang Kami" />
             </li>
         </ul>
     </div>

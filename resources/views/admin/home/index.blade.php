@@ -97,6 +97,12 @@
                 @endif
             </div>
 
+            <x-primary-button type="submit">
+                {{ __('Simpan Perubahan') }}
+            </x-primary-button>
+
+            <hr class="my-4">
+
             <div>
                 <x-secondary-button class="mb-4" data-modal-target="modal-items-section2"
                     data-modal-toggle="modal-items-section2">
@@ -147,10 +153,6 @@
                     <p class="mt-5 text-gray-700 text-sm">Belum ada item yang ditambahkan.</p>
                 @endforelse
             </div>
-
-            <x-primary-button type="submit">
-                {{ __('Simpan Perubahan') }}
-            </x-primary-button>
         </form>
     </x-card>
 
@@ -167,8 +169,8 @@
             </x-secondary-button>
         </div>
 
-        <form action="{{ route('admin.home.update', $data->id) }}" class="mt-5 space-y-6" enctype="multipart/form-data"
-            method="POST">
+        <form action="{{ route('admin.home.update', $data->id) }}" class="mt-5 space-y-6"
+            enctype="multipart/form-data" method="POST">
             @csrf
             @method('PUT')
 
@@ -470,6 +472,12 @@
                 <x-input-error :messages="$errors->get('section7_title')" class="mt-2" />
             </div>
 
+            <x-primary-button type="submit">
+                {{ __('Simpan Perubahan') }}
+            </x-primary-button>
+
+            <hr class="my-4">
+
             {{-- tambahkan item --}}
             <div>
                 <x-secondary-button class="mb-4" data-modal-target="modal-items-section7"
@@ -521,10 +529,6 @@
                     <p class="mt-5 text-gray-700 text-sm">Belum ada item yang ditambahkan.</p>
                 @endforelse
             </div>
-
-            <x-primary-button type="submit">
-                {{ __('Simpan Perubahan') }}
-            </x-primary-button>
         </form>
     </x-card>
 
@@ -653,6 +657,9 @@
         <script>
             function deleteItem(id) {
                 if (confirm('Apakah Anda yakin ingin menghapus item ini?')) {
+                    // disable the button to prevent multiple form submissions
+                    $(`#item-${id} button`).prop('disabled', true).text('Processing...');
+
                     $.ajax({
                         url: `{{ route('admin.home.item.destroy', ':id') }}`.replace(':id', id),
                         type: 'DELETE',
@@ -681,6 +688,9 @@
                 if (imageFile) {
                     formData.append('image', imageFile);
                 }
+
+                // disable the button to prevent multiple form submissions
+                $(`#item-${id} button`).prop('disabled', true).text('Processing...');
 
                 $.ajax({
                     url: `{{ route('admin.home.item.update', ':id') }}`.replace(':id', id),
