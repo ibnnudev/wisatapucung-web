@@ -18,6 +18,7 @@ class HomeController extends Controller
         return view('admin.home.index', [
             'data'          => $data,
             'section2Items' => $homeItems->where('section_number', 2),
+            'section7Items' => $homeItems->where('section_number', 7),
         ]);
     }
 
@@ -110,9 +111,13 @@ class HomeController extends Controller
             'description'    => 'required|string',
         ]);
 
-        $this->handleImageUpload($request, new HomeItem(), 'image', 'uploads/home');
 
-        HomeItem::create($request->except('_token', 'image'));
+        if ($request->hasFile('image')) {
+            $filename = time() . '.' . $request->file('image')->extension();
+            $request->file('image')->storeAs('uploads/home', $filename, 'public');
+        }
+
+        HomeItem::create($request->except('_token', 'image') + ['image' => $filename]);
 
         toastify()->toast('Data berhasil ditambahkan');
         return redirect()->route('admin.home.index')->with('success', 'Data berhasil ditambahkan');
