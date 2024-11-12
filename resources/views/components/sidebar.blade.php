@@ -5,7 +5,7 @@
         <span class="uppercase text-xs px-2 text-gray-500">Main</span>
         <ul class="space-y-1 text-sm">
             <li>
-                <x-menu-item route="admin.dashboard" label="Dashboard" />
+                {{-- <x-menu-item route="admin.dashboard" label="Dashboard" /> --}}
                 <x-menu-item route="admin.home.index" label="Beranda" />
                 <x-menu-item route="admin.about-us.index" label="Tentang Kami" />
                 <x-menu-item route="admin.geography.index" label="Geografi" />
