@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             HomeSeeder::class,
             AboutSeeder::class,
             GeographySeeder::class,
-            AttractionSeeder::class
+            AttractionSeeder::class,
+            ProductSeeder::class
         ]);
     }
 }

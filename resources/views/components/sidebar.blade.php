@@ -11,6 +11,7 @@
                 <x-menu-item route="admin.geography.index" label="Geografi" />
                 <x-menu-item route="admin.attraction.index" label="Atraksi" />
                 <x-menu-item route="admin.blog.index" label="Blog" />
+                <x-menu-item route="admin.product.index" label="Produk" />
             </li>
         </ul>
     </div>

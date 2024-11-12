@@ -67,9 +67,6 @@ window.addEventListener('load', function () {
         document.getElementById('toggleUnderlineButton').addEventListener('click', () => editor.chain().focus().toggleUnderline().run());
         document.getElementById('toggleStrikeButton').addEventListener('click', () => editor.chain().focus().toggleStrike().run());
         document.getElementById('toggleHighlightButton').addEventListener('click', () => editor.chain().focus().toggleHighlight({ color: '#ffc078' }).run());
-        document.getElementById('toggleCodeButton').addEventListener('click', () => {
-            editor.chain().focus().toggleCode().run();
-        });
 
         // Alignment buttons
         document.getElementById('toggleLeftAlignButton').addEventListener('click', () => {

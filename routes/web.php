@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -86,6 +87,15 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
     // Blog
     Route::get('/blog/get-image/{filename}', [BlogController::class, 'getImage'])->name('admin.blog.get-image');
     Route::resource('/blog', BlogController::class, ['as' => 'admin']);
+
+    // Product
+    // ::> Product - List Product
+    Route::post('/product/list-product', [ProductController::class, 'storeListProduct'])->name('admin.product.list-product.store');
+    Route::put('/product/list-product/{id}', [ProductController::class, 'updateListProduct'])->name('admin.product.list-product.update');
+    Route::delete('/product/list-product/{id}', [ProductController::class, 'destroyListProduct'])->name('admin.product.list-product.destroy');
+
+    Route::get('/product/get-image/{filename}', [ProductController::class, 'getImage'])->name('admin.product.get-image');
+    Route::resource('/product', ProductController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';
