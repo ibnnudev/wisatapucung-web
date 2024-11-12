@@ -43,10 +43,12 @@
                         <a href="{{ route('user.information') }}" class="block px-4 py-2 hover:bg-gray-100">Berita</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Penginapan</a>
+                        <a href="{{ route('user.accommodation') }}"
+                            class="block px-4 py-2 hover:bg-gray-100">Penginapan</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Paket Wisata</a>
+                        <a href="{{ route('user.tour-package') }}" class="block px-4 py-2 hover:bg-gray-100">Paket
+                            Wisata</a>
                     </li>
                 </ul>
             </div>

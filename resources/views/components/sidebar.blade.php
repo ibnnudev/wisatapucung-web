@@ -14,6 +14,8 @@
                 <x-menu-item route="admin.product.index" label="Produk" />
                 <x-menu-item route="admin.organization.index" label="Organisasi" />
                 <x-menu-item route="admin.contact.index" label="Customer Care" />
+                <x-menu-item route="admin.faq.index" label="FAQ" />
+                <x-menu-item route="admin.accomodation.index" label="Penginapan" />
             </li>
         </ul>
     </div>

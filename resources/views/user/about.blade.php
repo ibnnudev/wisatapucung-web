@@ -113,18 +113,12 @@
             </div>
 
             <div class="relative mt-12 lg:mt-20">
-                {{-- <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
-                    <img class="w-full"
-                        src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
-                        alt="" />
-                </div> --}}
 
                 <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
                     <div>
-                        <div
-                            class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 1 </span>
-                        </div>
+                        <img class="w-full h-72 rounded-lg shadow-lg mx-auto"
+                            src="https://cdn.pixabay.com/photo/2020/06/11/11/52/korean-folk-village-5286449_1280.jpg"
+                            alt="" />
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Pertanian Organik
                         </h3>
                         <p class="mt-4 text-base text-gray-600">
@@ -134,10 +128,9 @@
                     </div>
 
                     <div>
-                        <div
-                            class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 2 </span>
-                        </div>
+                        <img class="w-full h-72 rounded-lg shadow-lg mx-auto"
+                            src="https://cdn.pixabay.com/photo/2020/06/11/11/52/korean-folk-village-5286449_1280.jpg"
+                            alt="" />
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Kerajinan Tangan Lokal
                         </h3>
                         <p class="mt-4 text-base text-gray-600">Para pengrajin di Kalipucung menciptakan berbagai
@@ -145,10 +138,9 @@
                     </div>
 
                     <div>
-                        <div
-                            class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 3 </span>
-                        </div>
+                        <img class="w-full h-72 rounded-lg shadow-lg mx-auto"
+                            src="https://cdn.pixabay.com/photo/2020/06/11/11/52/korean-folk-village-5286449_1280.jpg"
+                            alt="" />
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Wisata Edukasi</h3>
                         <p class="mt-4 text-base text-gray-600">Kalipucung menawarkan program wisata edukatif, di mana
                             pengunjung dapat belajar tentang lingkungan, sejarah, dan kebudayaan dusun. </p>
@@ -165,10 +157,9 @@
 
                 <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
                     <div>
-                        <div
-                            class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 4 </span>
-                        </div>
+                        <img class="w-full h-72 rounded-lg shadow-lg mx-auto"
+                            src="https://cdn.pixabay.com/photo/2020/06/11/11/52/korean-folk-village-5286449_1280.jpg"
+                            alt="" />
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Pengolahan Kopi Lokal
                         </h3>
                         <p class="mt-4 text-base text-gray-600">
@@ -177,10 +168,9 @@
                     </div>
 
                     <div>
-                        <div
-                            class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 5 </span>
-                        </div>
+                        <img class="w-full h-72 rounded-lg shadow-lg mx-auto"
+                            src="https://cdn.pixabay.com/photo/2020/06/11/11/52/korean-folk-village-5286449_1280.jpg"
+                            alt="" />
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Ekowisata dan Jalur
                             Trekking
                         </h3>
@@ -189,10 +179,9 @@
                     </div>
 
                     <div>
-                        <div
-                            class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 6 </span>
-                        </div>
+                        <img class="w-full h-72 rounded-lg shadow-lg mx-auto"
+                            src="https://cdn.pixabay.com/photo/2020/06/11/11/52/korean-folk-village-5286449_1280.jpg"
+                            alt="" />
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Produk Olahan
                             Tradisional</h3>
                         <p class="mt-4 text-base text-gray-600">

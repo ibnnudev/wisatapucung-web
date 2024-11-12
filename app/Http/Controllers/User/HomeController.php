@@ -60,4 +60,14 @@ class HomeController extends Controller
         $file = Storage::disk('public')->get('uploads/home/' . $filename);
         return response($file, 200)->header('Content-Type', 'image/jpeg');
     }
+
+    public function accommodation()
+    {
+        return view('user.accommodation');
+    }
+
+    public function tourPackage()
+    {
+        return view('user.tour_package');
+    }
 }

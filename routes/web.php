@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\AccomodationController;
 use App\Http\Controllers\Admin\AttractionController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Admin\OrganizationController;
@@ -25,6 +27,8 @@ Route::get('/informasi', [HomeController::class, 'information'])->name('user.inf
 Route::get('/kontak-kami', [HomeController::class, 'contact'])->name('user.contact');
 Route::get('/produk', [HomeController::class, 'product'])->name('user.product');
 Route::get('/organisasi', [HomeController::class, 'organization'])->name('user.organization');
+Route::get('/penginapan', [HomeController::class, 'accommodation'])->name('user.accommodation');
+Route::get('/paket-wisata', [HomeController::class, 'tourPackage'])->name('user.tour-package');
 
 
 Route::middleware('auth')->prefix('/dashboard')->group(function () {
@@ -114,6 +118,13 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     // Contact
     Route::resource('/contact', ContactController::class, ['as' => 'admin']);
+
+    // Faq
+    Route::resource('/faq', FaqController::class, ['as' => 'admin']);
+
+    // Accomodation
+    Route::get('/accomodation/get-image/{filename}', [AccomodationController::class, 'getImage'])->name('admin.accomodation.get-image');
+    Route::resource('/accomodation', AccomodationController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';
