@@ -3,18 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\ListProduct;
-use App\Models\Product;
+use App\Models\ListOrganization;
+use App\Models\Organization;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class ProductController extends Controller
+class OrganizationController extends Controller
 {
     public function index()
     {
-        $data        = Product::first();
-        $listProduct = ListProduct::all();
-        return view('admin.product.index', compact('data', 'listProduct'));
+        $data             = Organization::first();
+        $listOrganization = ListOrganization::all();
+
+        return view('admin.organization.index', compact('data', 'listOrganization'));
     }
 
     public function create()
@@ -39,16 +40,14 @@ class ProductController extends Controller
 
     public function update(Request $request, string $id)
     {
-        $data = Product::findOrFail($id);
-        $request->validate([
-            'title'       => 'required',
-            'description' => 'required',
-        ]);
+        $data = Organization::findOrFail($id);
 
-        $data->update($request->except('_token', '_method'));
+        $this->handleImageUpload($request, $data, 'section1_image', 'uploads/organization');
 
-        toastify()->toast('Data berhasil diubah');
-        return redirect()->route('admin.product.index');
+        $data->update($request->except(['_token', '_method', 'section1_image']));
+
+        toastify()->toast('Data berhasil diperbarui');
+        return redirect()->route('admin.organization.index')->with('success', 'Data berhasil diperbarui');
     }
 
     public function destroy(string $id)
@@ -58,7 +57,7 @@ class ProductController extends Controller
 
     public function getImage(string $filename)
     {
-        $file = Storage::disk('public')->get('uploads/product/' . $filename);
+        $file = Storage::disk('public')->get('uploads/organization/' . $filename);
         return response($file, 200)->header('Content-Type', 'image/jpeg');
     }
 
@@ -83,13 +82,8 @@ class ProductController extends Controller
         }
     }
 
-    // ::> Product - List Product
-    public function createListProduct()
-    {
-        return view('admin.product.list.create');
-    }
-
-    public function storeListProduct(Request $request)
+    // ::> Organization - List Organization
+    public function storeListOrganization(Request $request)
     {
         $request->validate([
             'title'       => 'required',
@@ -97,48 +91,58 @@ class ProductController extends Controller
             'image'       => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
-        $filename = time() . '.' . $request->file('image')->extension();
-        $request->file('image')->storeAs('uploads/product', $filename, 'public');
 
-        ListProduct::create([
+        $filename = time() . '.' . $request->file('image')->extension();
+        $request->file('image')->storeAs('uploads/organization', $filename, 'public');
+
+        ListOrganization::create([
             'title'       => $request->title,
             'description' => $request->description,
             'image'       => $filename,
         ]);
 
         toastify()->toast('Data berhasil ditambahkan');
-        return redirect()->route('admin.product.index');
+        return redirect()->route('admin.organization.index');
     }
 
-    public function editListProduct(string $id)
+    public function updateListOrganization(Request $request, string $id)
     {
-        $data = ListProduct::findOrFail($id);
-        return view('admin.product.list.edit', compact('data'));
-    }
+        $data = ListOrganization::findOrFail($id);
 
-    public function updateListProduct(Request $request, string $id)
-    {
-        $data = ListProduct::findOrFail($id);
         $request->validate([
             'title'       => 'required',
             'description' => 'required',
+            'image'       => 'image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
-        $this->handleImageUpload($request, $data, 'image', 'uploads/product');
+        if ($request->file('image')) {
+            Storage::disk('public')->delete("uploads/organization/" . $data->image);
 
-        $data->update($request->except('_token', '_method', 'image'));
+            $filename = time() . '.' . $request->file('image')->extension();
+            $request->file('image')->storeAs('uploads/organization', $filename, 'public');
 
-        toastify()->toast('Data berhasil diubah');
-        return redirect()->route('admin.product.index');
+            $data->image = $filename;
+        }
+
+        $data->title       = $request->title;
+        $data->description = $request->description;
+        $data->save();
+
+        toastify()->toast('Data berhasil diperbarui');
+        return redirect()->route('admin.organization.index');
     }
 
-    public function destroyListProduct(string $id)
+    public function destroyListOrganization(string $id)
     {
-        $data = ListProduct::findOrFail($id);
-        Storage::disk('public')->delete('uploads/product/' . $data->image);
+        $data = ListOrganization::findOrFail($id);
+
+        if ($data->image) {
+            Storage::disk('public')->delete("uploads/organization/" . $data->image);
+        }
+
         $data->delete();
 
         toastify()->toast('Data berhasil dihapus');
-        return redirect()->route('admin.product.index');
+        return redirect()->route('admin.organization.index');
     }
 }

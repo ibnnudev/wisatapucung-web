@@ -124,9 +124,9 @@
         </div>
     </div>
     <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-        <label for="wysiwyg-example" class="sr-only">Publish post</label>
+        <label class="sr-only">Publish post</label>
         <div
-            id="wysiwyg-example"class="block w-full px-0 text-xs text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
+            class="wysiwyg-editor block w-full px-0 text-xs text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
         </div>
     </div>
 </div>

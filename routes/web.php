@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
+use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
@@ -90,12 +91,23 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     // Product
     // ::> Product - List Product
+    Route::get('/product/list-product/create', [ProductController::class, 'createListProduct'])->name('admin.product.list-product.create');
     Route::post('/product/list-product', [ProductController::class, 'storeListProduct'])->name('admin.product.list-product.store');
+    Route::get('/product/list-product/{id}/edit', [ProductController::class, 'editListProduct'])->name('admin.product.list-product.edit');
     Route::put('/product/list-product/{id}', [ProductController::class, 'updateListProduct'])->name('admin.product.list-product.update');
     Route::delete('/product/list-product/{id}', [ProductController::class, 'destroyListProduct'])->name('admin.product.list-product.destroy');
 
     Route::get('/product/get-image/{filename}', [ProductController::class, 'getImage'])->name('admin.product.get-image');
     Route::resource('/product', ProductController::class, ['as' => 'admin']);
+
+    // Organization
+    // ::> Organization - List Organization
+    Route::post('/organization/list-organization', [OrganizationController::class, 'storeListOrganization'])->name('admin.organization.list-organization.store');
+    Route::put('/organization/list-organization/{id}', [OrganizationController::class, 'updateListOrganization'])->name('admin.organization.list-organization.update');
+    Route::delete('/organization/list-organization/{id}', [OrganizationController::class, 'destroyListOrganization'])->name('admin.organization.list-organization.destroy');
+
+    Route::get('/organization/get-image/{filename}', [OrganizationController::class, 'getImage'])->name('admin.organization.get-image');
+    Route::resource('/organization', OrganizationController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';

@@ -58,7 +58,7 @@
             <div>
                 <x-input-label class="mb-2" for="content" :value="__('Konten')" required />
                 <x-editor />
-                <textarea name="content" id="editor-content" class="hidden" required>{{ $blog->content }}</textarea>
+                <textarea name="content" id="editor-content" class="wysiwyg-input hidden" required>{{ $blog->content }}</textarea>
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>
 

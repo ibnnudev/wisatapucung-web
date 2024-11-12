@@ -24,7 +24,6 @@ return new class extends Migration
             // section 2
             $table->string('section2_title');
             $table->text('section2_description');
-            $table->json('section2_people')->nullable();
 
             $table->timestamps();
         });

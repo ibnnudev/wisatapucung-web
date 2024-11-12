@@ -19,10 +19,5 @@ class Organization extends Model
         // section 2
         'section2_title',
         'section2_description',
-        'section2_people', // JSON {'image', 'name', 'position'}
-    ];
-
-    protected $casts = [
-        'section2_people' => 'array',
     ];
 }

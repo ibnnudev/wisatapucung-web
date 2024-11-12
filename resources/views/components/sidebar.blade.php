@@ -12,6 +12,7 @@
                 <x-menu-item route="admin.attraction.index" label="Atraksi" />
                 <x-menu-item route="admin.blog.index" label="Blog" />
                 <x-menu-item route="admin.product.index" label="Produk" />
+                <x-menu-item route="admin.organization.index" label="Organisasi" />
             </li>
         </ul>
     </div>

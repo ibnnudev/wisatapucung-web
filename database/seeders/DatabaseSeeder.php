@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             AboutSeeder::class,
             GeographySeeder::class,
             AttractionSeeder::class,
-            ProductSeeder::class
+            ProductSeeder::class,
+            OrganizationSeeder::class
         ]);
     }
 }

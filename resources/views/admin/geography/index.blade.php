@@ -218,7 +218,7 @@
             <div>
                 <x-input-label for="section3_description" :value="__('Deskripsi')" required />
                 <x-editor />
-                <textarea name="section3_description" id="editor-content" class="hidden" required>{{ $data->section3_description }}</textarea>
+                <textarea name="section3_description" id="editor-content" class="wysiwyg-input hidden" required>{{ $data->section3_description }}</textarea>
                 <x-input-error :messages="$errors->get('section3_description')" class="mt-2" />
             </div>
 

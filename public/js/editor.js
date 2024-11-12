@@ -7,8 +7,8 @@ import HorizontalRule from 'https://esm.sh/@tiptap/extension-horizontal-rule@2.6
 import TextStyle from 'https://esm.sh/@tiptap/extension-text-style@2.6.6';
 
 window.addEventListener('load', function () {
-    const editorElement = document.getElementById('wysiwyg-example');
-    const hiddenInput = document.getElementById('editor-content');
+    const editorElement = document.querySelector('.wysiwyg-editor');
+    const hiddenInput = document.querySelector('.wysiwyg-input');
 
     // if hidden input Value is empty, set default value
     if (hiddenInput.value === '') {
