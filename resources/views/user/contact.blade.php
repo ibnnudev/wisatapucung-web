@@ -26,7 +26,7 @@
                             alt="" />
                     </div>
 
-                    <div class="hidden md:mt-auto md:block">
+                    {{-- <div class="hidden md:mt-auto md:block">
                         <div class="flex items-center">
                             <svg class="w-6 h-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                 fill="currentColor">
@@ -73,7 +73,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="lg:pl-12">

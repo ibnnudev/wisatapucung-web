@@ -13,6 +13,7 @@
                 <x-menu-item route="admin.blog.index" label="Blog" />
                 <x-menu-item route="admin.product.index" label="Produk" />
                 <x-menu-item route="admin.organization.index" label="Organisasi" />
+                <x-menu-item route="admin.contact.index" label="Customer Care" />
             </li>
         </ul>
     </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\AttractionController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
@@ -110,6 +111,9 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     Route::get('/organization/get-image/{filename}', [OrganizationController::class, 'getImage'])->name('admin.organization.get-image');
     Route::resource('/organization', OrganizationController::class, ['as' => 'admin']);
+
+    // Contact
+    Route::resource('/contact', ContactController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';
