@@ -55,7 +55,7 @@
                 </x-secondary-button>
 
                 @forelse ($demography as $item)
-                    <div class="p-6 border border-gray-100 rounded-lg mb-4" id="demography-{{ $item->id }}">
+                    <div class="border border-gray-300 p-6 rounded-lg shadow-sm" id="demography-{{ $item->id }}">
                         @csrf
                         @method('PUT')
 
@@ -141,7 +141,7 @@
                 </x-secondary-button>
 
                 @forelse ($topography as $item)
-                    <div class="p-6 border border-gray-100 rounded-lg mb-4" id="topography-{{ $item->id }}">
+                    <div class="border border-gray-300 p-6 rounded-lg shadow-sm" id="topography-{{ $item->id }}">
                         @csrf
                         @method('PUT')
 
@@ -217,8 +217,8 @@
             {{-- description --}}
             <div>
                 <x-input-label for="section3_description" :value="__('Deskripsi')" required />
-                <x-textarea id="section3_description" name="section3_description" class="mt-1 block w-full"
-                    :value="$data->section3_description" />
+                <x-editor />
+                <textarea name="section3_description" id="editor-content" class="hidden" required>{{ $data->section3_description }}</textarea>
                 <x-input-error :messages="$errors->get('section3_description')" class="mt-2" />
             </div>
 
@@ -307,7 +307,7 @@
                 </x-secondary-button>
 
                 @forelse ($disaster as $item)
-                    <div class="p-6 border border-gray-100 rounded-lg mb-4" id="disaster-{{ $item->id }}">
+                    <div class="border border-gray-300 p-6 rounded-lg shadow-sm" id="disaster-{{ $item->id }}">
                         @csrf
                         @method('PUT')
 
@@ -533,7 +533,7 @@
     </div>
 
     @push('scripts')
-        @include('admin.lib.datatable')
+        <script src="{{ asset('js/editor.js') }}" type="module"></script>
         <script>
             function deleteDemography(id) {
                 if (confirm('Apakah Anda yakin ingin menghapus item ini?')) {

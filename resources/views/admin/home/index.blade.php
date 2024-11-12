@@ -110,7 +110,7 @@
                 </x-secondary-button>
 
                 @forelse ($section2Items as $item)
-                    <div class="p-6 border border-gray-100 rounded-lg mb-4" id="item-{{ $item->id }}">
+                    <div class="border border-gray-300 p-6 rounded-lg shadow-sm" id="item-{{ $item->id }}">
                         @csrf
                         @method('PUT')
 
@@ -487,7 +487,7 @@
                 </x-secondary-button>
 
                 @forelse ($section7Items as $item)
-                    <div class="p-6 border border-gray-100 rounded-lg mb-4" id="item-{{ $item->id }}">
+                    <div class="border border-gray-300 p-6 rounded-lg shadow-sm" id="item-{{ $item->id }}">
                         @csrf
                         @method('PUT')
 
@@ -655,7 +655,6 @@
     </div>
 
     @push('scripts')
-        @include('admin.lib.datatable')
         <script>
             function deleteItem(id) {
                 if (confirm('Apakah Anda yakin ingin menghapus item ini?')) {

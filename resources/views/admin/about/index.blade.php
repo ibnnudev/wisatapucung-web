@@ -61,7 +61,7 @@
                 </x-secondary-button>
 
                 @forelse ($bussiness as $item)
-                    <div class="p-6 border border-gray-100 rounded-lg mb-4" id="bussiness-{{ $item->id }}">
+                    <div class="border border-gray-300 p-6 rounded-lg shadow-sm" id="bussiness-{{ $item->id }}">
                         @csrf
                         @method('PUT')
 
@@ -154,7 +154,7 @@
                 </x-secondary-button>
 
                 @forelse ($potentials as $item)
-                    <div class="p-6 border border-gray-100 rounded-lg mb-4" id="potential-{{ $item->id }}">
+                    <div class="border border-gray-300 p-6 rounded-lg shadow-sm" id="potential-{{ $item->id }}">
                         @csrf
                         @method('PUT')
 
@@ -319,7 +319,6 @@
     </div>
 
     @push('scripts')
-        @include('admin.lib.datatable')
         <script>
             function deletePotential(id) {
                 if (confirm('Apakah Anda yakin ingin menghapus item ini?')) {
