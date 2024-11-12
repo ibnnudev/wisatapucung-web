@@ -78,8 +78,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <x-input-label for="items" :value="__('Item Poin')" required />
-                        <x-textarea id="items" name="items" class="mt-1 block w-full" :value="$item->items" />
+                        <x-input-label for="items" :value="__('Item Poin (Pisahkan dengan koma [,])')" required />
+                        <x-textarea id="items" name="items" class="mt-1 block w-full" :value="$item->items"
+                            placeholder="item1, item2, ..." />
                         <x-input-error :messages="$errors->get('items')" class="mt-2" />
                     </div>
 
@@ -146,7 +147,8 @@
 
                         <div>
                             <x-input-label for="items" :value="__('Item Poin')" required />
-                            <x-textarea id="items" name="items" class="mt-1 block w-full" />
+                            <x-textarea id="items" name="items" class="mt-1 block w-full"
+                                placeholder="item1, item2, ..." />
                             <x-input-error :messages="$errors->get('items')" class="mt-2" />
                         </div>
                     </div>

@@ -10,6 +10,7 @@
                 <x-menu-item route="admin.about-us.index" label="Tentang Kami" />
                 <x-menu-item route="admin.geography.index" label="Geografi" />
                 <x-menu-item route="admin.attraction.index" label="Atraksi" />
+                <x-menu-item route="admin.blog.index" label="Blog" />
             </li>
         </ul>
     </div>

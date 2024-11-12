@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\AttractionController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
@@ -81,6 +82,10 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     Route::get('/attraction/get-image/{filename}', [AttractionController::class, 'getImage'])->name('admin.attraction.get-image');
     Route::resource('/attraction', AttractionController::class, ['as' => 'admin']);
+
+    // Blog
+    Route::get('/blog/get-image/{filename}', [BlogController::class, 'getImage'])->name('admin.blog.get-image');
+    Route::resource('/blog', BlogController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';

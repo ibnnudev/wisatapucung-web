@@ -11,11 +11,9 @@ class Blog extends Model
     protected $fillable = [
         'title',
         'slug',
-        'thumbnail',
-        'detail_image',
-        'keyword',
+        'thumbnail', // max: 1mb
+        'keyword', // max: 10
         'tag',
-        'created_at',
         'content',
         'status',
         'creator'
