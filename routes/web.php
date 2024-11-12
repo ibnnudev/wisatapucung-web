@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
 Route::get('get-image/{filename}', [HomeController::class, 'getImage'])->name('user.home.get-image');
+Route::get('get-image/blog/{filename}', [BlogController::class, 'getBlogImage'])->name('user.blog.get-image');
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
 Route::get('/tentang-kami', [HomeController::class, 'about'])->name('user.about');

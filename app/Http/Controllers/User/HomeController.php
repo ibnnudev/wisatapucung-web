@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
+use App\Models\Faq;
 use App\Models\Home;
+use App\Models\HomeItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -12,7 +15,10 @@ class HomeController extends Controller
     public function index()
     {
         $data = Home::first();
-        return view('user.home', compact('data'));
+        $homeItem = HomeItem::all();
+        $blogs = Blog::latest()->limit(4)->get();
+        $faqs = Faq::all();
+        return view('user.home', compact('data', 'homeItem', 'blogs', 'faqs'));
     }
 
     public function about()

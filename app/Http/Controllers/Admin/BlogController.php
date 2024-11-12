@@ -111,4 +111,10 @@ class BlogController extends Controller
         $file = Storage::disk('public')->get('uploads/blogs/' . $filename);
         return response($file, 200)->header('Content-Type', 'image/jpeg');
     }
+
+    public function getBlogImage(string $filename)
+    {
+        $file = Storage::disk('public')->get('uploads/blogs/' . $filename);
+        return response($file, 200)->header('Content-Type', 'image/jpeg');
+    }
 }
