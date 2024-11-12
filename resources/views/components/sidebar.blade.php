@@ -11,11 +11,12 @@
                 <x-menu-item route="admin.geography.index" label="Geografi" />
                 <x-menu-item route="admin.attraction.index" label="Atraksi" />
                 <x-menu-item route="admin.blog.index" label="Blog" />
+                <x-menu-item route="admin.accomodation.index" label="Penginapan" />
+                <x-menu-item route="admin.tour-package.index" label="Paket Wisata" />
                 <x-menu-item route="admin.product.index" label="Produk" />
                 <x-menu-item route="admin.organization.index" label="Organisasi" />
                 <x-menu-item route="admin.contact.index" label="Customer Care" />
                 <x-menu-item route="admin.faq.index" label="FAQ" />
-                <x-menu-item route="admin.accomodation.index" label="Penginapan" />
             </li>
         </ul>
     </div>

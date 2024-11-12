@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\TourPackageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -125,6 +126,9 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
     // Accomodation
     Route::get('/accomodation/get-image/{filename}', [AccomodationController::class, 'getImage'])->name('admin.accomodation.get-image');
     Route::resource('/accomodation', AccomodationController::class, ['as' => 'admin']);
+
+    // Tour Package
+    Route::resource('/tour-package', TourPackageController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';
