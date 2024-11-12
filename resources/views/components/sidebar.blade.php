@@ -9,6 +9,7 @@
                 <x-menu-item route="admin.home.index" label="Beranda" />
                 <x-menu-item route="admin.about-us.index" label="Tentang Kami" />
                 <x-menu-item route="admin.geography.index" label="Geografi" />
+                <x-menu-item route="admin.attraction.index" label="Atraksi" />
             </li>
         </ul>
     </div>

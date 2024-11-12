@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\AttractionController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
@@ -71,6 +72,15 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     Route::get('/geography/get-image/{filename}', [GeographyController::class, 'getImage'])->name('admin.geography.get-image');
     Route::resource('/geography', GeographyController::class, ['as' => 'admin']);
+
+    // Attraction
+    // ::> Attraction - List Attraction
+    Route::post('/attraction/list-attraction', [AttractionController::class, 'storeListAttraction'])->name('admin.attraction.list-attraction.store');
+    Route::put('/attraction/list-attraction/{id}', [AttractionController::class, 'updateListAttraction'])->name('admin.attraction.list-attraction.update');
+    Route::delete('/attraction/list-attraction/{id}', [AttractionController::class, 'destroyListAttraction'])->name('admin.attraction.list-attraction.destroy');
+
+    Route::get('/attraction/get-image/{filename}', [AttractionController::class, 'getImage'])->name('admin.attraction.get-image');
+    Route::resource('/attraction', AttractionController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';

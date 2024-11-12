@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Attraction extends Model
+class ListAttraction extends Model
 {
-    protected $table = 'attractions';
+    protected $table = 'list_attractions';
     protected $fillable = [
-        // section 1
         'title',
+        'image',
         'description',
+        'items',
     ];
 }
