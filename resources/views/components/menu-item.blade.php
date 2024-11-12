@@ -3,8 +3,8 @@
 
 <li>
     <a href="{{ route($route) }}"
-        class="flex items-center p-2 rounded-lg hover:bg-gray-100 group
-        {{ request()->routeIs($route) ? 'bg-gray-100 font-medium text-gray-800' : 'text-gray-700' }}">
+        class="flex items-center p-2 rounded-lg group
+        {{ request()->routeIs($route) ? 'bg-black font-medium text-white' : 'text-gray-700 hover:bg-gray-100' }}">
         <span class="ms-3">{{ $label }}</span>
     </a>
 </li>

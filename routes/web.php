@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GeographyController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
@@ -51,6 +52,25 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     Route::get('/about-us/get-image/{filename}', [AboutUsController::class, 'getImage'])->name('admin.about-us.get-image');
     Route::resource('/about-us', AboutUsController::class, ['as' => 'admin']);
+
+    // Geography
+    // ::> Geography - Demography
+    Route::post('/geography/demography', [GeographyController::class, 'storeDemography'])->name('admin.geography.demography.store');
+    Route::put('/geography/demography/{id}', [GeographyController::class, 'updateDemography'])->name('admin.geography.demography.update');
+    Route::delete('/geography/demography/{id}', [GeographyController::class, 'destroyDemography'])->name('admin.geography.demography.destroy');
+
+    // ::> Geography - Topography
+    Route::post('/geography/topography', [GeographyController::class, 'storeTopography'])->name('admin.geography.topography.store');
+    Route::put('/geography/topography/{id}', [GeographyController::class, 'updateTopography'])->name('admin.geography.topography.update');
+    Route::delete('/geography/topography/{id}', [GeographyController::class, 'destroyTopography'])->name('admin.geography.topography.destroy');
+
+    // ::> Geography - Disaster
+    Route::post('/geography/disaster', [GeographyController::class, 'storeDisaster'])->name('admin.geography.disaster.store');
+    Route::put('/geography/disaster/{id}', [GeographyController::class, 'updateDisaster'])->name('admin.geography.disaster.update');
+    Route::delete('/geography/disaster/{id}', [GeographyController::class, 'destroyDisaster'])->name('admin.geography.disaster.destroy');
+
+    Route::get('/geography/get-image/{filename}', [GeographyController::class, 'getImage'])->name('admin.geography.get-image');
+    Route::resource('/geography', GeographyController::class, ['as' => 'admin']);
 });
 
 require __DIR__ . '/auth.php';

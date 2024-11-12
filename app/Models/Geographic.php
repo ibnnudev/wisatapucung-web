@@ -10,13 +10,10 @@ class Geographic extends Model
     protected $fillable = [
         // section 1
         'section1_title',
-        'section1_demographic',  // JSON {'icon', 'title', 'description'}
         'section1_hero_image',
 
         // section 2
         'section2_title',
-        'section2_description',
-        'section2_topography',  // JSON {'icon', 'title', 'description'}
 
         // section 3
         'section3_title',
@@ -27,12 +24,5 @@ class Geographic extends Model
         // section 4
         'section4_title',
         'section4_description',
-        'section4_disasters',  // JSON {'icon', 'title', 'description'}
-    ];
-
-    protected $casts = [
-        'section1_demographic' => 'array',
-        'section2_topography'  => 'array',
-        'section4_disasters'   => 'array',
     ];
 }

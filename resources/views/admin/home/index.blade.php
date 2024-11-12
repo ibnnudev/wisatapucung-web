@@ -42,7 +42,7 @@
                 @if ($data->section1_image)
                     <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                             href="{{ route('admin.home.get-image', $data->section1_image) }}" target="_blank"
-                            class="text-black font-medium underline">{{ $data->section1_image }}</a></small>
+                            class="text-black font-medium underline">{{ $data->section1_image }}&nbsp; ↗</a></small>
                 @endif
             </div>
 
@@ -93,7 +93,7 @@
                 @if ($data->section2_image)
                     <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                             href="{{ route('admin.home.get-image', $data->section2_image) }}" target="_blank"
-                            class="text-black font-medium underline">{{ $data->section2_image }}</a></small>
+                            class="text-black font-medium underline">{{ $data->section2_image }}&nbsp; ↗</a></small>
                 @endif
             </div>
 
@@ -129,7 +129,8 @@
                             @if ($item->image)
                                 <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                                         href="{{ route('admin.home.get-image', $item->image) }}" target="_blank"
-                                        class="text-black font-medium underline">{{ $item->image }}</a></small>
+                                        class="text-black font-medium underline">{{ $item->image }}&nbsp;
+                                        ↗</a></small>
                             @endif
                         </div>
 
@@ -196,7 +197,7 @@
                 @if ($data->section3_image)
                     <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                             href="{{ route('admin.home.get-image', $data->section3_image) }}" target="_blank"
-                            class="text-black font-medium underline">{{ $data->section3_image }}</a></small>
+                            class="text-black font-medium underline">{{ $data->section3_image }}&nbsp; ↗</a></small>
                 @endif
             </div>
 
@@ -260,7 +261,7 @@
                 @if ($data->section4_image)
                     <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                             href="{{ route('admin.home.get-image', $data->section4_image) }}" target="_blank"
-                            class="text-black font-medium underline">{{ $data->section4_image }}</a></small>
+                            class="text-black font-medium underline">{{ $data->section4_image }}&nbsp; ↗</a></small>
                 @endif
             </div>
 
@@ -340,7 +341,7 @@
                 @if ($data->section5_image)
                     <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                             href="{{ route('admin.home.get-image', $data->section5_image) }}" target="_blank"
-                            class="text-black font-medium underline">{{ $data->section5_image }}</a></small>
+                            class="text-black font-medium underline">{{ $data->section5_image }}&nbsp; ↗</a></small>
                 @endif
             </div>
 
@@ -412,7 +413,7 @@
                 @if ($data->section6_image)
                     <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                             href="{{ route('admin.home.get-image', $data->section6_image) }}" target="_blank"
-                            class="text-black font-medium underline">{{ $data->section6_image }}</a></small>
+                            class="text-black font-medium underline">{{ $data->section6_image }}&nbsp; ↗</a></small>
                 @endif
             </div>
 
@@ -505,7 +506,8 @@
                             @if ($item->image)
                                 <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                                         href="{{ route('admin.home.get-image', $item->image) }}" target="_blank"
-                                        class="text-black font-medium underline">{{ $item->image }}</a></small>
+                                        class="text-black font-medium underline">{{ $item->image }}&nbsp;
+                                        ↗</a></small>
                             @endif
                         </div>
 

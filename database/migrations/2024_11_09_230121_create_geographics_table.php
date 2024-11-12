@@ -15,13 +15,10 @@ return new class extends Migration
             $table->id();
             // section 1
             $table->string('section1_title');
-            $table->json('section1_demographic')->nullable();
             $table->string('section1_hero_image');
 
             // section 2
             $table->string('section2_title');
-            $table->text('section2_description');
-            $table->json('section2_topography')->nullable();
 
             // section 3
             $table->string('section3_title');
@@ -32,7 +29,6 @@ return new class extends Migration
             // section 4
             $table->string('section4_title');
             $table->text('section4_description');
-            $table->json('section4_disasters')->nullable();
 
             $table->timestamps();
         });

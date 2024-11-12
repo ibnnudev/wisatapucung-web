@@ -8,6 +8,7 @@
                 <x-menu-item route="admin.dashboard" label="Dashboard" />
                 <x-menu-item route="admin.home.index" label="Beranda" />
                 <x-menu-item route="admin.about-us.index" label="Tentang Kami" />
+                <x-menu-item route="admin.geography.index" label="Geografi" />
             </li>
         </ul>
     </div>

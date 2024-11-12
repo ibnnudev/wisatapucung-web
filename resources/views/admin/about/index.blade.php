@@ -42,7 +42,7 @@
                 @if ($data->section1_image)
                     <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                             href="{{ route('admin.about-us.get-image', $data->section1_image) }}" target="_blank"
-                            class="text-black font-medium underline">{{ $data->section1_image }}</a></small>
+                            class="text-black font-medium underline">{{ $data->section1_image }}&nbsp; ↗</a></small>
                 @endif
             </div>
 
@@ -80,7 +80,7 @@
                             @if ($item->image)
                                 <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                                         href="{{ route('admin.about-us.get-image', $item->image) }}" target="_blank"
-                                        class="text-black font-medium underline">{{ $item->image }}</a></small>
+                                        class="text-black font-medium underline">{{ $item->image }}&nbsp; ↗</a></small>
                             @endif
                         </div>
 
@@ -173,7 +173,8 @@
                             @if ($item->image)
                                 <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
                                         href="{{ route('admin.about-us.get-image', $item->image) }}" target="_blank"
-                                        class="text-black font-medium underline">{{ $item->image }}</a></small>
+                                        class="text-black font-medium underline">{{ $item->image }}&nbsp;
+                                        ↗</a></small>
                             @endif
                         </div>
 
