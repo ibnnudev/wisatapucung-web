@@ -102,7 +102,9 @@ Route::middleware('auth')->prefix('/dashboard')->group(function () {
 
     // Organization
     // ::> Organization - List Organization
+    Route::get('/organization/list-organization/create', [OrganizationController::class, 'createListOrganization'])->name('admin.organization.list-organization.create');
     Route::post('/organization/list-organization', [OrganizationController::class, 'storeListOrganization'])->name('admin.organization.list-organization.store');
+    Route::get('/organization/list-organization/{id}/edit', [OrganizationController::class, 'editListOrganization'])->name('admin.organization.list-organization.edit');
     Route::put('/organization/list-organization/{id}', [OrganizationController::class, 'updateListOrganization'])->name('admin.organization.list-organization.update');
     Route::delete('/organization/list-organization/{id}', [OrganizationController::class, 'destroyListOrganization'])->name('admin.organization.list-organization.destroy');
 

@@ -83,6 +83,11 @@ class OrganizationController extends Controller
     }
 
     // ::> Organization - List Organization
+    public function createListOrganization()
+    {
+        return view('admin.organization.list.create');
+    }
+
     public function storeListOrganization(Request $request)
     {
         $request->validate([
@@ -103,6 +108,12 @@ class OrganizationController extends Controller
 
         toastify()->toast('Data berhasil ditambahkan');
         return redirect()->route('admin.organization.index');
+    }
+
+    public function editListOrganization(string $id)
+    {
+        $data = ListOrganization::findOrFail($id);
+        return view('admin.organization.list.edit', compact('data'));
     }
 
     public function updateListOrganization(Request $request, string $id)
