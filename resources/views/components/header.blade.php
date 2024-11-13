@@ -35,7 +35,14 @@
             <a href="{{ route('user.attraction') }}"
                 class="text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('atraksi') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Atraksi</a>
             <a type="button" data-dropdown-toggle="information-dropdown"
-                class="cursor-pointer text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('informasi') ? ($theme === 'dark' ? 'bg-gray-200' : 'bg-indigo-600') : '' }}">Informasi</a>
+                class="cursor-pointer text-sm/6 font-semibold {{ $theme === 'dark' ? 'text-gray-900 hover:bg-gray-200' : 'text-white hover:bg-indigo-600' }} py-1 px-2 rounded-lg {{ request()->is('informasi') ||
+                request()->is('berita') ||
+                request()->is('penginapan') ||
+                request()->is('paket-wisata')
+                    ? ($theme === 'dark'
+                        ? 'bg-gray-200'
+                        : 'bg-indigo-600')
+                    : '' }}">Informasi</a>
             <!-- Dropdown menu -->
             <div id="information-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                 <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">

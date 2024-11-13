@@ -17,26 +17,30 @@
             </div>
 
             <div class="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-2 gap-x-16 gap-y-12">
-                <div>
-                    <p class="mt-6 text-xl font-semibold">
-                        <a href="#" title="" class="text-black"> Paket Wajib </a>
-                    </p>
-                    <div class="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
-                    <ol class="list-inside space-y-2 text-gray-500">
-                        <li>
-                            <div class="flex items-center justify-between">
-                                <span class="font-medium text-black">Transportasi</span>
-                                <span>Rp 500.000</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center justify-between">
-                                <span class="font-medium text-black">Penginapan</span>
-                                <span>Rp 1.000.000</span>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
+                @forelse ($listTourPackage as $item => $value)
+                    <div>
+                        <p class="mt-6 text-xl font-semibold">
+                            <a href="#" title="" class="text-black">
+                                {{ $item }}
+                            </a>
+                        </p>
+                        <div class="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
+                        <ol class="list-inside space-y-2 text-gray-500">
+                            @forelse ($value as $data)
+                                <li>
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-medium text-black">
+                                            {{ $data->name }}
+                                        </span>
+                                        <span>Rp {{ number_format($data->price, 0, ',', '.') }}</span>
+                                    </div>
+                                </li>
+                            @empty
+                            @endforelse
+                        </ol>
+                    </div>
+                @empty
+                @endforelse
             </div>
         </div>
     </section>

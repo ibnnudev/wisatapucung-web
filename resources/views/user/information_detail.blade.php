@@ -1,91 +1,40 @@
 <x-guest-layout>
     <div class="bg-gray-50">
         <x-header theme="dark" />
-        <section>
-            <div class="max-w-4xl mx-auto flex flex-col justify-center pt-24 space-y-4">
+        <section class="py-40">
+            <div class="max-w-4xl mx-auto flex flex-col justify-center space-y-4">
                 <h1 class="font-bold text-3xl lg:text-4xl max-w-5xl">
-                    Radiant: A beautiful new marketing site template
+                    {{ $data->title }}
                 </h1>
-                <p class="text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, enim.
-                </p>
                 <div class="md:flex items-center justify-between py-4">
                     <div class="md:flex items-center gap-2">
                         <span class="bg-slate-100 text-slate-500 font-medium me-2 px-4 py-1.5 rounded">
-                            News
+                            {{ $data->tag }}
                         </span>
-                        <p class="hidden md:block text-slate-500 text-sm">12 Agustus 2024 •
-                            Agus Salim
-                        </p>
+                        <p class="hidden md:block text-slate-500 text-sm">{{ $data->created_at->format('d F Y') }} •
+                            {{ $data->creator }}</p>
                     </div>
-                    <a href="#" class="mt-5 md:mt-0 block">
-                        <x-secondary-button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
-                            data-dropdown-trigger="hover">Bagikan Artikel</x-secondary-button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownHover"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
-                            <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownHoverButton">
-                                {{-- <li>
-                                    <a href="{{ 'https://api.whatsapp.com/send?text=' . route('detail-pena-santri', $penaSantri->slug) }}"
-                                        class="block px-4 py-2 hover:bg-gray-100">WhatsApp</a>
-                                </li>
-                                <li>
-                                    <a href="{{ 'https://www.instagram.com/share?url=' . route('detail-pena-santri', $penaSantri->slug) }}"
-                                        class="block px-4 py-2 hover:bg-gray-100">Instagram</a>
-                                </li>
-                                <li>
-                                    <a href="{{ 'https://twitter.com/intent/tweet?url=' . route('detail-pena-santri', $penaSantri->slug) . '&text=' . $title }}"
-                                        class="block px-4 py-2 hover:bg-gray-100">Twitter</a>
-                                </li>
-                                <li>
-                                    <a href="{{ 'http://www.linkedin.com/shareArticle?mini=true&url=' . route('detail-pena-santri', $penaSantri->slug) . '&title=' . $title . '&summary="' . $summary }}"
-                                        class="block px-4 py-2 hover:bg-gray-100">
-                                        Facebook
-                                    </a>
-                                </li> --}}
-                            </ul>
-                        </div>
-                    </a>
                 </div>
             </div>
 
             <div class="border-y-[1px] mt-4 py-8 max-w-4xl mx-auto">
                 <div class="px-2 py-2 border rounded-lg">
                     <img class="rounded-lg shadow-md object-cover lazyload overflow-hidden md:h-[32rem] w-full"
-                        lazy="loading" src="https://cdn.pixabay.com/photo/2024/01/11/09/50/village-8501168_1280.jpg">
+                        lazy="loading" src="{{ route('admin.blog.get-image', $data->thumbnail) }}"
+                        alt="{{ $data->title }}">
                 </div>
 
                 <br />
 
-                <article class="prose-base">
-                    <p class="text-gray-700">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ab ipsa similique explicabo
-                        ipsum. Quasi facere laboriosam saepe tempore, quam adipisci debitis quidem consequuntur quae
-                        natus blanditiis culpa amet fuga veritatis cupiditate nemo quaerat nihil libero quisquam
-                        quibusdam quia nostrum incidunt ratione voluptate! Eos iusto, sunt odit ipsa cum pariatur sequi
-                        exercitationem numquam? Voluptates velit accusantium beatae quaerat eos. Quisquam repellat
-                        accusamus fugit excepturi repudiandae dolore aut in, itaque soluta quasi ut aspernatur officia
-                        alias! Veritatis temporibus laudantium eius commodi architecto libero molestias pariatur veniam
-                        ipsam repellendus, fuga consequuntur necessitatibus eligendi ab magnam quod voluptate maiores
-                        quos natus enim dolorem!
-                    </p>
-                    <p class="text-gray-700">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ab ipsa similique explicabo
-                        ipsum. Quasi facere laboriosam saepe tempore, quam adipisci debitis quidem consequuntur quae
-                        natus blanditiis culpa amet fuga veritatis cupiditate nemo quaerat nihil libero quisquam
-                        quibusdam quia nostrum incidunt ratione voluptate! Eos iusto, sunt odit ipsa cum pariatur sequi
-                        exercitationem numquam? Voluptates velit accusantium beatae quaerat eos. Quisquam repellat
-                        accusamus fugit excepturi repudiandae dolore aut in, itaque soluta quasi ut aspernatur officia
-                        alias! Veritatis temporibus laudantium eius commodi architecto libero molestias pariatur veniam
-                        ipsam repellendus, fuga consequuntur necessitatibus eligendi ab magnam quod voluptate maiores
-                        quos natus enim dolorem!
-                    </p>
+                <article
+                    class="prose-base prose-ul:list-decimal prose-lg:prose-xl max-w-4xl mx-auto prose-code:prose-code prose-li:list-inside text-justify">
+                    {!! $data->content !!}
                 </article>
             </div>
 
         </section>
 
-        <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+        {{-- <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
             <div class="px-4 mx-auto sm:px-6 lg:px-24 max-w-full">
                 <div class="flex items-end justify-between">
                     <div class="flex-1 text-center lg:text-left">
@@ -100,10 +49,10 @@
                     </div>
 
                     <div class="hidden lg:block">
-                        <button type="button"
-                            class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-fit h-9 px-2.5 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white">
+                        <a type="button" href="{{ route('user.information') }}"
+                            class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-fit h-9 px-2.5 hover:bg-black hover:text-white focus:bg-black focus:text-white">
                             Selengkapnya
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -135,7 +84,7 @@
                                 aliqua
                                 dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                             <a href="#" title=""
-                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
+                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-black transition-all duration-200 border-b-2 border-transparent hover:border-black focus:border-black">
                                 Continue Reading
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                     fill="currentColor">
@@ -173,7 +122,7 @@
                                 aliqua
                                 dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                             <a href="#" title=""
-                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
+                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-black transition-all duration-200 border-b-2 border-transparent hover:border-black focus:border-black">
                                 Continue Reading
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                     fill="currentColor">
@@ -212,7 +161,7 @@
                                 aliqua
                                 dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                             <a href="#" title=""
-                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
+                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-black transition-all duration-200 border-b-2 border-transparent hover:border-black focus:border-black">
                                 Continue Reading
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                     fill="currentColor">
@@ -251,7 +200,7 @@
                                 aliqua
                                 dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                             <a href="#" title=""
-                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
+                                class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-black transition-all duration-200 border-b-2 border-transparent hover:border-black focus:border-black">
                                 Continue Reading
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                                     fill="currentColor">
@@ -266,7 +215,7 @@
 
                 <div class="flex items-center justify-center mt-8 space-x-3 lg:hidden">
                     <button type="button"
-                        class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-9 h-9 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white">
+                        class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-9 h-9 hover:bg-black hover:text-white focus:bg-black focus:text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -275,7 +224,7 @@
                     </button>
 
                     <button type="button"
-                        class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-9 h-9 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white">
+                        class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-9 h-9 hover:bg-black hover:text-white focus:bg-black focus:text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -283,7 +232,7 @@
                     </button>
                 </div>
             </div>
-        </section>
+        </section> --}}
     </div>
 
     <x-footer />

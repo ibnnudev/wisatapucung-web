@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\Accomodation;
 use App\Models\Attraction;
 use App\Models\Blog;
 use App\Models\Bussiness;
@@ -16,6 +17,7 @@ use App\Models\HomeItem;
 use App\Models\ListAttraction;
 use App\Models\Potential;
 use App\Models\Topography;
+use App\Models\TourPackage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -60,12 +62,15 @@ class HomeController extends Controller
 
     public function information()
     {
-        return view('user.information');
+        $blogs = Blog::latest()->get();
+        return view('user.information', compact('blogs'));
     }
 
     public function informationDetail($slug)
     {
-        return view('user.information_detail', compact('slug'));
+        $data = Blog::where('slug', $slug)->first();
+        $relatedBlog = Blog::where('tag', $data->tag)->where('slug', '!=', $slug)->limit(3)->get();
+        return view('user.information_detail', compact('data'));
     }
 
     public function contact()
@@ -85,12 +90,14 @@ class HomeController extends Controller
 
     public function accommodation()
     {
-        return view('user.accommodation');
+        $data = Accomodation::first();
+        return view('user.accommodation', compact('data'));
     }
 
     public function tourPackage()
     {
-        return view('user.tour_package');
+        $listTourPackage = TourPackage::all()->groupBy('category');
+        return view('user.tour_package', compact('listTourPackage'));
     }
 
     public function getImage(string $filename)
@@ -126,9 +133,9 @@ class HomeController extends Controller
     }
 
     // accommodation
-    public function getAccommodationImage(string $filename)
+    public function getAccomodationImage(string $filename)
     {
-        $file = Storage::disk('public')->get('uploads/accommodations/' . $filename);
+        $file = Storage::disk('public')->get('uploads/accomodation/' . $filename);
         return response($file, 200)->header('Content-Type', 'image/jpeg');
     }
 
