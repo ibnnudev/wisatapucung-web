@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\Attraction;
 use App\Models\Blog;
 use App\Models\Bussiness;
 use App\Models\Demography;
@@ -12,6 +13,7 @@ use App\Models\Faq;
 use App\Models\Geographic;
 use App\Models\Home;
 use App\Models\HomeItem;
+use App\Models\ListAttraction;
 use App\Models\Potential;
 use App\Models\Topography;
 use Illuminate\Http\Request;
@@ -51,7 +53,9 @@ class HomeController extends Controller
 
     public function attraction()
     {
-        return view('user.attraction');
+        $data = Attraction::first();
+        $listAttraction = ListAttraction::all();
+        return view('user.attraction', compact('data', 'listAttraction'));
     }
 
     public function information()
@@ -103,7 +107,7 @@ class HomeController extends Controller
 
     public function getAttractionImage(string $filename)
     {
-        $file = Storage::disk('public')->get('uploads/attractions/' . $filename);
+        $file = Storage::disk('public')->get('uploads/attraction/' . $filename);
         return response($file, 200)->header('Content-Type', 'image/jpeg');
     }
 
