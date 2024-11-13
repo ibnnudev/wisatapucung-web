@@ -1,7 +1,11 @@
 <x-guest-layout>
     <div class="bg-gray-50">
         <x-header theme="dark" />
+<<<<<<< HEAD
         <section class="bg-[#FCF8F1] bg-opacity-30 py-32 lg:py-32">
+=======
+        <section class="bg-[#FCF8F1] bg-opacity-30 py-10 sm:py-16 lg:py-32">
+>>>>>>> 603888b4 (deploy)
             <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
                     <div>
