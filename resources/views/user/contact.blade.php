@@ -88,24 +88,26 @@
                                 ini.
                             </p>
 
-                            <form action="#" method="POST" class="mt-4">
+                            <form action="{{ route('user.contact.store') }}" method="POST" class="mt-4">
+                                @csrf
+
                                 <div class="space-y-6">
                                     <div>
                                         <label for="" class="text-base font-medium text-gray-900"> Nama Lengkap
                                         </label>
                                         <div class="mt-2.5 relative">
-                                            <input type="text" name="" id=""
+                                            <input type="text" name="name" id=""
                                                 placeholder="Masukan nama lengkap Anda"
                                                 class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500 caret-orange-500" />
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label for="" class="text-base font-medium text-gray-900"> Alamat Email
+                                        <label for="" class="text-base font-medium text-gray-900"> No. Telepon
                                         </label>
                                         <div class="mt-2.5 relative">
-                                            <input type="text" name="" id=""
-                                                placeholder="Masukan alamat email Anda"
+                                            <input type="text" name="phone" id=""
+                                                placeholder="Masukan nomor telepon anda 0815xxxxx"
                                                 class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500 caret-orange-500" />
                                         </div>
                                     </div>
@@ -114,7 +116,7 @@
                                         <label for="" class="text-base font-medium text-gray-900"> Pesan
                                         </label>
                                         <div class="mt-2.5 relative">
-                                            <textarea name="" id="" placeholder="Masukan pesan Anda"
+                                            <textarea name="message" id="" placeholder="Masukan pesan Anda"
                                                 class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:ring-orange-500 focus:border-orange-500 caret-orange-500"
                                                 rows="4"></textarea>
                                         </div>

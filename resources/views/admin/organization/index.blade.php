@@ -15,7 +15,8 @@
             </x-secondary-button>
         </div>
 
-        <form action="{{ route('admin.organization.update', $data->id) }}" method="POST" class="mt-5 space-y-6">
+        <form action="{{ route('admin.organization.update', $data->id) }}" method="POST" class="mt-5 space-y-6"
+            enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -25,6 +26,19 @@
                     class="mt-1 block w-full" />
                 <x-input-error :messages="$errors->get('section1_title')" class="mt-2" />
             </div>
+
+            <div>
+                <x-input-label for="section1_image" :value="__('Latar Gambar')" required />
+                <x-file-input type="file" id="section1_image" name="section1_image" class="mt-1 block w-full" />
+                <x-input-error :messages="$errors->get('section1_image')" class="mt-2" />
+
+                @if ($data->section1_image)
+                    <small class="mt-2 text-gray-700">Gambar telah diunggah: <a
+                            href="{{ route('admin.organization.get-image', $data->section1_image) }}" target="_blank"
+                            class="text-black font-medium underline">{{ $data->section1_image }}&nbsp; ↗</a></small>
+                @endif
+            </div>
+
 
             {{-- section1_tagline --}}
             <div>

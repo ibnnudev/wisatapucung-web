@@ -25,6 +25,8 @@
     {{-- AOS --}}
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    @toastifyCss
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -66,6 +68,9 @@
                 delay: 1000
             });
     </script>
+
+    @toastifyJs
+
     @stack('js-internal')
 </body>
 

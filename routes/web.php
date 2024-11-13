@@ -27,6 +27,8 @@ Route::get('get-image/accomodation/{filename}', [HomeController::class, 'getAcco
 Route::get('get-image/tour-package/{filename}', [HomeController::class, 'getTourPackageImage'])->name('user.tour-package.get-image');
 Route::get('get-image/about-us/{filename}', [HomeController::class, 'getAboutUsImage'])->name('user.about-us.get-image');
 
+Route::post('/kontak-kami', [HomeController::class, 'storeContact'])->name('user.contact.store');
+
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
 Route::get('/tentang-kami', [HomeController::class, 'about'])->name('user.about');
 Route::get('/demografis', [HomeController::class, 'demography'])->name('user.demography');

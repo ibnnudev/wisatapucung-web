@@ -7,9 +7,7 @@
                 <span class="sr-only">
                     Wisata Edukasi Kalipucung
                 </span>
-                <img class="h-8 w-auto"
-                    src="https://tailwindui.com/plus/img/logos/mark.svg?color={{ $theme == 'light' ? 'green' : 'indigo' }}&shade=600"
-                    alt="">
+                <img class="h-24 w-auto" src="{{ asset('images/logo_atas.png') }}" alt="" loading="lazy">
             </a>
         </div>
         <div class="flex lg:hidden">
