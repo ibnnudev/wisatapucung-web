@@ -18,7 +18,14 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
 Route::get('get-image/{filename}', [HomeController::class, 'getImage'])->name('user.home.get-image');
-Route::get('get-image/blog/{filename}', [BlogController::class, 'getBlogImage'])->name('user.blog.get-image');
+Route::get('get-image/geography/{filename}', [HomeController::class, 'getGeographyImage'])->name('user.geography.get-image');
+Route::get('get-image/blog/{filename}', [HomeController::class, 'getBlogImage'])->name('user.blog.get-image');
+Route::get('get-image/attraction/{filename}', [HomeController::class, 'getAttractionImage'])->name('user.attraction.get-image');
+Route::get('get-image/product/{filename}', [HomeController::class, 'getProductImage'])->name('user.product.get-image');
+Route::get('get-image/organization/{filename}', [HomeController::class, 'getOrganizationImage'])->name('user.organization.get-image');
+Route::get('get-image/accomodation/{filename}', [HomeController::class, 'getAccomodationImage'])->name('user.accomodation.get-image');
+Route::get('get-image/tour-package/{filename}', [HomeController::class, 'getTourPackageImage'])->name('user.tour-package.get-image');
+Route::get('get-image/about-us/{filename}', [HomeController::class, 'getAboutUsImage'])->name('user.about-us.get-image');
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
 Route::get('/tentang-kami', [HomeController::class, 'about'])->name('user.about');
