@@ -4,7 +4,7 @@
     </div>
 
     {{-- SECOND --}}
-    <section class="pt-10 overflow-hidden bg-gray-50 sm:pt-16 lg:pt-32">
+    <section class="pt-48 overflow-hidden bg-gray-50 sm:pt-16 lg:pt-32">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">

@@ -2,7 +2,7 @@
     <div class="bg-gray-50">
         <x-header theme="dark" />
         <section class="py-40">
-            <div class="max-w-4xl mx-auto flex flex-col justify-center space-y-4">
+            <div class="px-4 md:px-0 max-w-4xl mx-auto flex flex-col justify-center space-y-4">
                 <h1 class="font-bold text-3xl lg:text-4xl max-w-5xl">
                     {{ $data->title }}
                 </h1>
@@ -20,14 +20,14 @@
             <div class="border-y-[1px] mt-4 py-8 max-w-4xl mx-auto">
                 <div class="px-2 py-2 border rounded-lg">
                     <img class="rounded-lg shadow-md object-cover lazyload overflow-hidden md:h-[32rem] w-full"
-                        lazy="loading" src="{{ route('admin.blog.get-image', $data->thumbnail) }}"
+                        lazy="loading" src="{{ route('user.blog.get-image', $data->thumbnail) }}"
                         alt="{{ $data->title }}">
                 </div>
 
                 <br />
 
                 <article
-                    class="prose-base prose-ul:list-decimal prose-lg:prose-xl max-w-4xl mx-auto prose-code:prose-code prose-li:list-inside text-justify">
+                    class="px-4 md:px-0 prose-base prose-ul:list-decimal prose-lg:prose-xl max-w-4xl mx-auto prose-code:prose-code prose-li:list-inside text-justify">
                     {!! $data->content !!}
                 </article>
             </div>

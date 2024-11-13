@@ -2,7 +2,7 @@
     <div class="bg-gray-50">
         <x-header theme="dark" />
 
-        <section class="py-10 bg-white sm:py-16 lg:py-48">
+        <section class="py-32 bg-white lg:py-48">
             <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div class="max-w-2xl mx-auto text-center">
                     <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
@@ -26,7 +26,7 @@
                                     {!! $item->description !!}
                                 </article>
                             </div>
-                            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                            <div class="w-full lg:max-w-lg">
                                 <img class="object-cover object-center rounded-xl shadow-lg w-full h-[26rem]"
                                     alt="hero" data-aos="fade-left" loading="lazy"
                                     src="{{ route('user.product.get-image', $item->image) }}">

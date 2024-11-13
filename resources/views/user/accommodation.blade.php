@@ -17,7 +17,7 @@
 
                 <br />
 
-                <article class="prose-base prose-ul:list-decimal prose-li:list-inside text-justify">
+                <article class="px-6 lg:px-0 prose-base prose-ul:list-decimal prose-li:list-inside text-justify">
                     {!! $data->description !!}
                 </article>
             </div>

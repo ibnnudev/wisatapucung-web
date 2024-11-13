@@ -1,6 +1,6 @@
 <x-guest-layout>
+    <x-header theme="light" />
     <div class="bg-white">
-        <x-header theme="light" />
         <div class="relative isolate px-6 pt-14 lg:px-8 mb-24">
             <div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
                 <div class="text-center">
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="lg:col-span-3">
-                    <img class="w-full rounded-lg shadow-xl"
+                    <img class="w-full rounded-lg shadow-xl object-cover"
                         src="{{ route('user.home.get-image', $data->section2_image) }}" alt="" />
                 </div>
             </div>
@@ -91,7 +91,7 @@
 
                 <div class="relative pl-20 pr-6 sm:pl-6 md:px-0">
                     <div class="relative w-full max-w-xs mt-4 mb-10 ml-auto">
-                        <img class="ml-auto h-[26rem] object-cover rounded-lg shadow-xl"
+                        <img class="ml-auto h-[26rem] object-cover rounded-lg shadow-xl" loading="lazy"
                             src="{{ route('user.home.get-image', $data->section3_image) }}" alt="" />
 
                         <img class="absolute -top-4 -left-12"
@@ -117,7 +117,7 @@
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
                 <div class="relative mb-12">
-                    <img class="w-full h-[25rem] rounded-md"
+                    <img class="w-full h-[25rem] rounded-md object-cover" loading="lazy"
                         src="{{ route('user.home.get-image', $data->section4_image) }}" alt="" />
 
                     <div class="absolute w-full max-w-xs px-4 -translate-x-1/2 sm:px-0 sm:max-w-sm left-1/2 -bottom-12">
@@ -159,19 +159,20 @@
     <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
         <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
             <div class="grid items-center md:grid-cols-2 md:gap-x-20 gap-y-10">
-                <div class="relative pl-16 pr-10 sm:pl-6 md:pl-0 xl:pr-0 md:order-2">
-                    <img class="absolute top-6 -right-4 xl:-right-12"
+                <div class="relative px-4 lg:pl-16 lg:pr-10 sm:pl-6 md:pl-0 xl:pr-0 md:order-2">
+                    <img class="absolute top-6 -right-4 xl:-right-12" loading="lazy"
                         src="https://cdn.rareblocks.xyz/collection/celebration/images/features/3/dots-pattern.svg"
                         alt="" />
 
-                    <div class="relative max-w-md ml-auto">
-                        <div class="overflow-hidden aspect-w-3 aspect-h-4 rounded-lg shadow-xl">
-                            <img class="object-cover w-[35rem] h-[30rem] scale-150 rounded-lg shadow-xl"
-                                src="{{ route('user.home.get-image', $data->section5_image) }}" alt="" />
+                    <div class="relative lg:max-w-md ml-auto">
+                        <div class="overflow-hidden lg:aspect-w-3 lg:aspect-h-4 rounded-lg shadow-xl">
+                            <img class="object-cover w-full h-[36rem] lg:w-[35rem] lg:h-[30rem] lg:scale-150 rounded-lg shadow-xl"
+                                loading="lazy" src="{{ route('user.home.get-image', $data->section5_image) }}"
+                                alt="" />
                             alt="" />
                         </div>
 
-                        <div class="absolute bottom-0 -left-16">
+                        <div class="absolute bottom-0 lg:-left-16">
                             <div class="bg-orange-600 rounded-lg">
                                 <div class="py-4 pl-4 pr-10 sm:py-6 sm:pl-8 sm:pr-16">
                                     <span class="block text-xl font-bold text-white sm:text-4xl lg:text-5xl">

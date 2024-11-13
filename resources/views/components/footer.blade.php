@@ -109,7 +109,7 @@
         <div class="mt-20 md:mt-28 2xl:mt-32">
             <div class="lg:flex lg:items-center lg:justify-between">
                 <div class="sm:flex sm:items-center sm:justify-start sm:space-x-8">
-                    <img src="{{ asset('images/Logo Primer.png') }}" class="w-full h-28" alt="">
+                    <img src="{{ asset('images/Logo Primer.png') }}" class="w-full h-24" alt="">
                 </div>
 
                 <p class="mt-6 text-sm text-blue-200 lg:mt-0">© Copyright {{ date('Y') }}, All Rights Reserved by

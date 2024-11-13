@@ -2,7 +2,7 @@
     <div class="bg-whute">
         <x-header theme="light" />
 
-        <section class="py-10 bg-no-repeat bg-cover sm:py-16 lg:pt-48 lg:pb-24"
+        <section class="py-32 bg-no-repeat bg-cover lg:pt-48 lg:pb-24"
             style="background-image: url('{{ route('user.geography.get-image', $data->section1_hero_image) }}');"
             loading="lazy">
             <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
@@ -19,7 +19,7 @@
                                 <div class="flex items-center">
                                     <img src="{{ route('user.geography.get-image', $item->image) }}" alt="icon"
                                         class="flex-shrink-0 w-14 h-14" loading="lazy" />
-                                    <h3 class="ml-2 text-6xl font-bold text-white">
+                                    <h3 class="ml-2 text-4xl lg:text-6xl font-bold text-white">
                                         {{ $item->title }}
                                     </h3>
                                 </div>

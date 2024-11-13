@@ -3,7 +3,7 @@
         <x-header theme="dark" />
     </div>
 
-    <section class="py-10 bg-white sm:py-16 lg:py-48">
+    <section class="py-32 bg-white lg:py-48">
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-2xl mx-auto text-center">
                 <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
