@@ -7,10 +7,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!-- Favicon Basic -->
+    <link href="https://dusunkalipucung.com/images/logo_atas.png" rel="icon">
 <link rel="icon" type="image/x-icon" href="https://dusunkalipucung.com/images/logo_atas.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://dusunkalipucung.com/images/logo_atas.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://dusunkalipucung.com/images/logo_atas.png">
 <link rel="icon" type="image/png" sizes="48x48" href="https://dusunkalipucung.com/images/logo_atas.png">
+
+<meta name="mobile-web-app-capable" content="yes">
 
 <!-- Apple Touch Icons -->
 <link rel="apple-touch-icon" href="https://dusunkalipucung.com/images/logo_atas.png">
@@ -37,7 +40,7 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <!-- Web App Manifest -->
-<link rel="manifest" href="/site.webmanifest">
+<!--<link rel="manifest" href="/site.webmanifest">-->
 
 <!-- Favicon Meta Tags -->
 <meta name="theme-color" content="#ffffff">
