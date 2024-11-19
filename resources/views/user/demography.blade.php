@@ -69,11 +69,11 @@
             <div class="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
                 <div class="pr-12 sm:pr-0">
                     <div class="relative max-w-md mb-12">
-                        <img class="object-cover rounded-md shadow-lg h-[30rem]"
+                        <img class="object-cover rounded-xl shadow-lg h-[30rem]"
                             src="{{ route('user.geography.get-image', $data->section3_image1) }}" alt=""
                             loading="lazy">
 
-                        <img class="absolute origin-bottom-right scale-75 h-[30rem] object-cover rounded-md shadow-lg -bottom-20 -right-12"
+                        <img class="absolute origin-bottom-right scale-75 h-[30rem] object-cover rounded-xl shadow-lg -bottom-20 -right-12"
                             src="{{ route('user.geography.get-image', $data->section3_image2) }}" alt=""
                             loading="lazy">
                     </div>

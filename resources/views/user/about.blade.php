@@ -16,7 +16,7 @@
             </div>
 
             <div class="mt-10 sm:mt-16">
-                <img class="w-full max-w-4xl mx-auto -mb-16 rounded-lg shadow-xl"
+                <img class="w-full max-w-5xl mx-auto -mb-16 rounded-lg shadow-xl object-cover"
                     src="{{ route('user.about-us.get-image', $data->section1_image) }}" alt="image section 1"
                     loading="lazy" />
             </div>
@@ -64,7 +64,7 @@
                 <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
                     @forelse ($potentials as $item)
                         <div>
-                            <img class="w-full h-72 rounded-lg shadow-lg mx-auto"
+                            <img class="w-full h-72 rounded-lg shadow-lg mx-auto object-cover"
                                 src="{{ route('user.about-us.get-image', $item->image) }}" alt="" />
                             <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">{{ $item->title }}
                             </h3>

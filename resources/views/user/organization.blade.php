@@ -8,15 +8,15 @@
                         <p class="text-base font-semibold tracking-wider text-blue-600 uppercase">
                             {{ $data->section1_tagline }}
                         </p>
-                        <h1 class="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl xl:text-7xl">
+                        <h1 class="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl">
                             {{ $data->section1_title }}
                         </h1>
-                        <p class="mt-4 text-base text-black lg:mt-8 sm:text-xl">
+                        <p class="mt-4 text-base text-black lg:mt-8 sm:text-lg">
                             {{ $data->section1_description }}
                         </p>
 
                         <a href="{{ $data->section1_button_url }}" title=""
-                            class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full lg:mt-16 hover:bg-yellow-400 focus:bg-yellow-400"
+                            class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-orange-600 rounded-lg lg:mt-16 hover:bg-orange-400 focus:bg-orange-400"
                             role="button">
                             {{ $data->section1_button_text }}
                             <svg class="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -28,8 +28,9 @@
                     </div>
 
                     <div>
-                        <img class="w-full" src="{{ route('user.organization.get-image', $data->section1_image) }}"
-                            alt="" loading="lazy" />
+                        <img class="w-full object-cover rounded-xl shadow-lg h-[26rem]"
+                            src="{{ route('user.organization.get-image', $data->section1_image) }}" alt=""
+                            loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@
                     <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
                         {{ $data->section2_title }}
                     </h2>
-                    <p class="max-w-2xl mx-auto mt-4 text-xl text-gray-600">
+                    <p class="max-w-2xl mx-auto mt-4 text-lg text-gray-600">
                         {{ $data->section2_description }}
                     </p>
                 </div>
