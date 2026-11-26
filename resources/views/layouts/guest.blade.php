@@ -7,37 +7,31 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon Basic -->
-    <link href="https://dusunkalipucung.com/images/logo_atas.png" rel="icon">
-    <link rel="icon" type="image/x-icon" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://dusunkalipucung.com/images/logo_atas.png">
+    <link href="https://firebasestorage.googleapis.com/v0/b/pr-yayasan.appspot.com/o/web%20dusun%2Ffavicon.ico?alt=media&token=812a6a79-043f-4f5b-8205-23a3e59d7b93" rel="icon">
+    <link rel="icon" type="image/x-icon" href="https://firebasestorage.googleapis.com/v0/b/pr-yayasan.appspot.com/o/web%20dusun%2Ffavicon.ico?alt=media&token=812a6a79-043f-4f5b-8205-23a3e59d7b93">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://firebasestorage.googleapis.com/v0/b/pr-yayasan.appspot.com/o/web%20dusun%2Ffavicon-16x16.png?alt=media&token=72688323-8e05-4308-86f6-07a7cb2e8da2">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://firebasestorage.googleapis.com/v0/b/pr-yayasan.appspot.com/o/web%20dusun%2Ffavicon-32x32.png?alt=media&token=c1d1b2d6-5c35-45a6-8599-d9b019af9f4b">
 
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://dusunkalipucung.com/images/logo_atas.png">
+    <!--<link rel="apple-touch-icon" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="57x57" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="60x60" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="76x76" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="120x120" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="144x144" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="152x152" href="https://dusunkalipucung.com/images/logo_atas.png">-->
+    <!--<link rel="apple-touch-icon" sizes="180x180" href="https://dusunkalipucung.com/images/logo_atas.png">-->
 
     <!-- Android Chrome Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="https://dusunkalipucung.com/images/logo_atas.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://dusunkalipucung.com/images/logo_atas.png">
-
-    <!-- Windows Metro -->
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!--<link rel="icon" type="image/png" sizes="192x192" href="https://firebasestorage.googleapis.com/v0/b/pr-yayasan.appspot.com/o/web%20dusun%2Fandroid-chrome-192x192.png?alt=media&token=b4273879-a71d-433e-a46a-8fba23f63362">-->
+    <!--<link rel="icon" type="image/png" sizes="512x512" href="https://firebasestorage.googleapis.com/v0/b/pr-yayasan.appspot.com/o/web%20dusun%2Fandroid-chrome-512x512.png?alt=media&token=0fcb4e2f-f7e1-42f4-bf40-68fa3c2842af">-->
 
     <!-- Safari Pinned Tab -->
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <!--<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">-->
 
     <!-- Favicon Meta Tags -->
     <meta name="theme-color" content="#ffffff">
@@ -100,35 +94,35 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TouristAttraction",
-  "name": "Wisata Edukasi Kalipucung",
-  "description": "Wisata Edukasi Kalipucung menawarkan pengalaman belajar interaktif dengan fasilitas modern, area bermain edukatif, dan pemandangan alam yang memukau.",
-  "url": "https://dusunkalipucung.com/",
-  "sameAs": [
-    // "https://facebook.com/WisataEdukasiKalipucung",
-    "https://www.instagram.com/dusunkalipucung/",
-    // "https://twitter.com/WisataKalipucung"
-  ],
-  "image": "https://dusunkalipucung.com/get-image/1731515007.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Kalipucung",
-    "addressRegion": "Jawa Tengah",
-    "addressCountry": "ID"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-7.625",
-    "longitude": "110.1330556"
-  },
-  "openingHours": "Mo-Su 00:00-23:59",
-//   "priceRange": "Rp25.000 - Rp100.000",
-  "telephone": "+62-823-9183-1572"
-}
-</script>
+<!--    <script type="application/ld+json">-->
+<!--{-->
+<!--  "@context": "https://schema.org",-->
+<!--  "@type": "TouristAttraction",-->
+<!--  "name": "Wisata Edukasi Kalipucung",-->
+<!--  "description": "Wisata Edukasi Kalipucung menawarkan pengalaman belajar interaktif dengan fasilitas modern, area bermain edukatif, dan pemandangan alam yang memukau.",-->
+<!--  "url": "https://dusunkalipucung.com/",-->
+<!--  "sameAs": [
+    "https://facebook.com/WisataEdukasiKalipucung",
+<!--    "https://www.instagram.com/dusunkalipucung/",
+    "https://twitter.com/WisataKalipucung"
+<!--  ],-->
+<!--  "image": "https://dusunkalipucung.com/get-image/1731515007.jpg",-->
+<!--  "address": {-->
+<!--    "@type": "PostalAddress",-->
+<!--    "addressLocality": "Kalipucung",-->
+<!--    "addressRegion": "Jawa Tengah",-->
+<!--    "addressCountry": "ID"-->
+<!--  },-->
+<!--  "geo": {-->
+<!--    "@type": "GeoCoordinates",-->
+<!--    "latitude": "-7.625",-->
+<!--    "longitude": "110.1330556"-->
+<!--  },-->
+<!--  "openingHours": "Mo-Su 00:00-23:59",
+"priceRange": "Rp25.000 - Rp100.000",
+<!--  "telephone": "+62-823-9183-1572"-->
+<!--}-->
+<!--</script>-->
 
     @toastifyCss
 
